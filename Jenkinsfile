@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'du / -sh'
+                sh 'df / -sh'
             }
         }
     }
