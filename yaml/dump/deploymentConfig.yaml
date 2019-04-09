@@ -1,0 +1,91 @@
+  apiVersion: apps.openshift.io/v1
+  kind: DeploymentConfig
+  metadata:
+#   annotations:
+#     openshift.io/generated-by: OpenShiftNewApp
+#   creationTimestamp: 2019-04-09T09:17:34Z
+#   generation: 2
+#   labels:
+#     app: nodejs-ex
+    name: nodejs-ex
+#   namespace: youpi
+#   resourceVersion: "3529586183"
+#   selfLink: /apis/apps.openshift.io/v1/namespaces/youpi/deploymentconfigs/nodejs-ex
+#   uid: 4f47e7d9-5aa8-11e9-b1ce-0a69cdf75e6f
+  spec:
+#   replicas: 1
+#   revisionHistoryLimit: 10
+#   selector:
+#     app: nodejs-ex
+#     deploymentconfig: nodejs-ex
+#   strategy:
+#     activeDeadlineSeconds: 21600
+#     resources: {}
+#     rollingParams:
+#       intervalSeconds: 1
+#       maxSurge: 25%
+#       maxUnavailable: 25%
+#       timeoutSeconds: 600
+#       updatePeriodSeconds: 1
+#     type: Rolling
+    template:
+#     metadata:
+#       annotations:
+#         openshift.io/generated-by: OpenShiftNewApp
+#       creationTimestamp: null
+#       labels:
+#         app: nodejs-ex
+#         deploymentconfig: nodejs-ex
+      spec:
+        containers:
+#       - image: 172.30.254.23:5000/youpi/nodejs-ex@sha256:849bfd8d3dee4d6c39a413578c8052ae537b831d2f659c32e32506382dfd5a7a
+#         imagePullPolicy: Always
+#         name: nodejs-ex
+#         ports:
+#         - containerPort: 8080
+#           protocol: TCP
+#         resources: {}
+#         terminationMessagePath: /dev/termination-log
+#         terminationMessagePolicy: File
+#       dnsPolicy: ClusterFirst
+#       restartPolicy: Always
+#       schedulerName: default-scheduler
+#       securityContext: {}
+#       terminationGracePeriodSeconds: 30
+#   test: false
+#   triggers:
+#   - type: ConfigChange
+#   - imageChangeParams:
+#       automatic: true
+#       containerNames:
+#       - nodejs-ex
+#       from:
+#         kind: ImageStreamTag
+#         name: nodejs-ex:latest
+#         namespace: youpi
+#       lastTriggeredImage: 172.30.254.23:5000/youpi/nodejs-ex@sha256:849bfd8d3dee4d6c39a413578c8052ae537b831d2f659c32e32506382dfd5a7a
+#     type: ImageChange
+# status:
+#   availableReplicas: 1
+#   conditions:
+#   - lastTransitionTime: 2019-04-09T09:19:31Z
+#     lastUpdateTime: 2019-04-09T09:19:31Z
+#     message: Deployment config has minimum availability.
+#     status: "True"
+#     type: Available
+#   - lastTransitionTime: 2019-04-09T09:19:32Z
+#     lastUpdateTime: 2019-04-09T09:19:32Z
+#     message: replication controller "nodejs-ex-1" successfully rolled out
+#     reason: NewReplicationControllerAvailable
+#     status: "True"
+#     type: Progressing
+#   details:
+#     causes:
+#     - type: ConfigChange
+#     message: config change
+#   latestVersion: 1
+#   observedGeneration: 2
+#   readyReplicas: 1
+#   replicas: 1
+#   unavailableReplicas: 0
+#   updatedReplicas: 1

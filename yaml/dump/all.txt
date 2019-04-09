@@ -1,0 +1,752 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      kubernetes.io/limit-ranger: 'LimitRanger plugin set: cpu, memory request for
+        container sti-build; cpu, memory limit for container sti-build; cpu, memory
+        request for init container git-clone; cpu, memory limit for init container
+        git-clone; cpu, memory request for init container manage-dockerfile; cpu,
+        memory limit for init container manage-dockerfile'
+      openshift.io/build.name: nodejs-ex-1
+      openshift.io/scc: privileged
+    creationTimestamp: 2019-04-09T09:17:34Z
+    labels:
+      openshift.io/build.name: nodejs-ex-1
+    name: nodejs-ex-1-build
+    namespace: youpi
+    ownerReferences:
+    - apiVersion: build.openshift.io/v1
+      controller: true
+      kind: Build
+      name: nodejs-ex-1
+      uid: 4f2df721-5aa8-11e9-ba57-0ab8769191d3
+    resourceVersion: "3529585825"
+    selfLink: /api/v1/namespaces/youpi/pods/nodejs-ex-1-build
+    uid: 4f35f31a-5aa8-11e9-ba57-0ab8769191d3
+  spec:
+    activeDeadlineSeconds: 3600
+    containers:
+    - args:
+      - --loglevel=0
+      command:
+      - openshift-sti-build
+      env:
+      - name: BUILD
+        value: |
+          {"kind":"Build","apiVersion":"build.openshift.io/v1","metadata":{"name":"nodejs-ex-1","namespace":"youpi","selfLink":"/apis/build.openshift.io/v1/namespaces/youpi/builds/nodejs-ex-1","uid":"4f2df721-5aa8-11e9-ba57-0ab8769191d3","resourceVersion":"3529582850","creationTimestamp":"2019-04-09T09:17:34Z","labels":{"app":"nodejs-ex","buildconfig":"nodejs-ex","openshift.io/build-config.name":"nodejs-ex","openshift.io/build.start-policy":"Serial"},"annotations":{"openshift.io/build-config.name":"nodejs-ex","openshift.io/build.number":"1"},"ownerReferences":[{"apiVersion":"build.openshift.io/v1","kind":"BuildConfig","name":"nodejs-ex","uid":"4f26b514-5aa8-11e9-b1ce-0a69cdf75e6f","controller":true}]},"spec":{"serviceAccount":"builder","source":{"type":"Git","git":{"uri":"https://github.com/xavierdpt/nodejs-ex"}},"strategy":{"type":"Source","sourceStrategy":{"from":{"kind":"DockerImage","name":"docker-registry.default.svc:5000/openshift/nodejs@sha256:b155814ac48feed9667b590a73f090367cbd7f64e34aaeb4dc70bfc8a4963ace"},"pullSecret":{"name":"builder-dockercfg-75l52"},"forcePull":true}},"output":{"to":{"kind":"DockerImage","name":"docker-registry.default.svc:5000/youpi/nodejs-ex:latest"},"pushSecret":{"name":"builder-dockercfg-75l52"}},"resources":{},"postCommit":{},"nodeSelector":null,"triggeredBy":[{"message":"Image change","imageChangeBuild":{"imageID":"docker-registry.default.svc:5000/openshift/nodejs@sha256:b155814ac48feed9667b590a73f090367cbd7f64e34aaeb4dc70bfc8a4963ace","fromRef":{"kind":"ImageStreamTag","namespace":"openshift","name":"nodejs:10"}}}]},"status":{"phase":"New","outputDockerImageReference":"docker-registry.default.svc:5000/youpi/nodejs-ex:latest","config":{"kind":"BuildConfig","namespace":"youpi","name":"nodejs-ex"},"output":{}}}
+      - name: SOURCE_REPOSITORY
+        value: https://github.com/xavierdpt/nodejs-ex
+      - name: SOURCE_URI
+        value: https://github.com/xavierdpt/nodejs-ex
+      - name: ALLOWED_UIDS
+        value: 1-
+      - name: DROP_CAPS
+        value: KILL,MKNOD,SETGID,SETUID
+      - name: PUSH_DOCKERCFG_PATH
+        value: /var/run/secrets/openshift.io/push
+      - name: PULL_DOCKERCFG_PATH
+        value: /var/run/secrets/openshift.io/pull
+      image: registry.reg-aws.openshift.com:443/openshift3/ose-docker-builder:v3.11.82
+      imagePullPolicy: Always
+      name: sti-build
+      resources:
+        limits:
+          cpu: "1"
+          memory: 512Mi
+        requests:
+          cpu: 20m
+          memory: 256Mi
+      securityContext:
+        privileged: true
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: FallbackToLogsOnError
+      volumeMounts:
+      - mountPath: /tmp/build
+        name: buildworkdir
+      - mountPath: /var/run/docker.sock
+        name: docker-socket
+      - mountPath: /var/run/crio/crio.sock
+        name: crio-socket
+      - mountPath: /var/run/secrets/openshift.io/push
+        name: builder-dockercfg-75l52-push
+        readOnly: true
+      - mountPath: /var/run/secrets/openshift.io/pull
+        name: builder-dockercfg-75l52-pull
+        readOnly: true
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: builder-token-fwdp6
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    imagePullSecrets:
+    - name: builder-dockercfg-75l52
+    initContainers:
+    - args:
+      - --loglevel=0
+      command:
+      - openshift-git-clone
+      env:
+      - name: BUILD
+        value: |
+          {"kind":"Build","apiVersion":"build.openshift.io/v1","metadata":{"name":"nodejs-ex-1","namespace":"youpi","selfLink":"/apis/build.openshift.io/v1/namespaces/youpi/builds/nodejs-ex-1","uid":"4f2df721-5aa8-11e9-ba57-0ab8769191d3","resourceVersion":"3529582850","creationTimestamp":"2019-04-09T09:17:34Z","labels":{"app":"nodejs-ex","buildconfig":"nodejs-ex","openshift.io/build-config.name":"nodejs-ex","openshift.io/build.start-policy":"Serial"},"annotations":{"openshift.io/build-config.name":"nodejs-ex","openshift.io/build.number":"1"},"ownerReferences":[{"apiVersion":"build.openshift.io/v1","kind":"BuildConfig","name":"nodejs-ex","uid":"4f26b514-5aa8-11e9-b1ce-0a69cdf75e6f","controller":true}]},"spec":{"serviceAccount":"builder","source":{"type":"Git","git":{"uri":"https://github.com/xavierdpt/nodejs-ex"}},"strategy":{"type":"Source","sourceStrategy":{"from":{"kind":"DockerImage","name":"docker-registry.default.svc:5000/openshift/nodejs@sha256:b155814ac48feed9667b590a73f090367cbd7f64e34aaeb4dc70bfc8a4963ace"},"pullSecret":{"name":"builder-dockercfg-75l52"},"forcePull":true}},"output":{"to":{"kind":"DockerImage","name":"docker-registry.default.svc:5000/youpi/nodejs-ex:latest"},"pushSecret":{"name":"builder-dockercfg-75l52"}},"resources":{},"postCommit":{},"nodeSelector":null,"triggeredBy":[{"message":"Image change","imageChangeBuild":{"imageID":"docker-registry.default.svc:5000/openshift/nodejs@sha256:b155814ac48feed9667b590a73f090367cbd7f64e34aaeb4dc70bfc8a4963ace","fromRef":{"kind":"ImageStreamTag","namespace":"openshift","name":"nodejs:10"}}}]},"status":{"phase":"New","outputDockerImageReference":"docker-registry.default.svc:5000/youpi/nodejs-ex:latest","config":{"kind":"BuildConfig","namespace":"youpi","name":"nodejs-ex"},"output":{}}}
+      - name: SOURCE_REPOSITORY
+        value: https://github.com/xavierdpt/nodejs-ex
+      - name: SOURCE_URI
+        value: https://github.com/xavierdpt/nodejs-ex
+      - name: ALLOWED_UIDS
+        value: 1-
+      - name: DROP_CAPS
+        value: KILL,MKNOD,SETGID,SETUID
+      image: registry.reg-aws.openshift.com:443/openshift3/ose-docker-builder:v3.11.82
+      imagePullPolicy: Always
+      name: git-clone
+      resources:
+        limits:
+          cpu: "1"
+          memory: 512Mi
+        requests:
+          cpu: 20m
+          memory: 256Mi
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: FallbackToLogsOnError
+      volumeMounts:
+      - mountPath: /tmp/build
+        name: buildworkdir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: builder-token-fwdp6
+        readOnly: true
+    - args:
+      - --loglevel=0
+      command:
+      - openshift-manage-dockerfile
+      env:
+      - name: BUILD
+        value: |
+          {"kind":"Build","apiVersion":"build.openshift.io/v1","metadata":{"name":"nodejs-ex-1","namespace":"youpi","selfLink":"/apis/build.openshift.io/v1/namespaces/youpi/builds/nodejs-ex-1","uid":"4f2df721-5aa8-11e9-ba57-0ab8769191d3","resourceVersion":"3529582850","creationTimestamp":"2019-04-09T09:17:34Z","labels":{"app":"nodejs-ex","buildconfig":"nodejs-ex","openshift.io/build-config.name":"nodejs-ex","openshift.io/build.start-policy":"Serial"},"annotations":{"openshift.io/build-config.name":"nodejs-ex","openshift.io/build.number":"1"},"ownerReferences":[{"apiVersion":"build.openshift.io/v1","kind":"BuildConfig","name":"nodejs-ex","uid":"4f26b514-5aa8-11e9-b1ce-0a69cdf75e6f","controller":true}]},"spec":{"serviceAccount":"builder","source":{"type":"Git","git":{"uri":"https://github.com/xavierdpt/nodejs-ex"}},"strategy":{"type":"Source","sourceStrategy":{"from":{"kind":"DockerImage","name":"docker-registry.default.svc:5000/openshift/nodejs@sha256:b155814ac48feed9667b590a73f090367cbd7f64e34aaeb4dc70bfc8a4963ace"},"pullSecret":{"name":"builder-dockercfg-75l52"},"forcePull":true}},"output":{"to":{"kind":"DockerImage","name":"docker-registry.default.svc:5000/youpi/nodejs-ex:latest"},"pushSecret":{"name":"builder-dockercfg-75l52"}},"resources":{},"postCommit":{},"nodeSelector":null,"triggeredBy":[{"message":"Image change","imageChangeBuild":{"imageID":"docker-registry.default.svc:5000/openshift/nodejs@sha256:b155814ac48feed9667b590a73f090367cbd7f64e34aaeb4dc70bfc8a4963ace","fromRef":{"kind":"ImageStreamTag","namespace":"openshift","name":"nodejs:10"}}}]},"status":{"phase":"New","outputDockerImageReference":"docker-registry.default.svc:5000/youpi/nodejs-ex:latest","config":{"kind":"BuildConfig","namespace":"youpi","name":"nodejs-ex"},"output":{}}}
+      - name: SOURCE_REPOSITORY
+        value: https://github.com/xavierdpt/nodejs-ex
+      - name: SOURCE_URI
+        value: https://github.com/xavierdpt/nodejs-ex
+      - name: ALLOWED_UIDS
+        value: 1-
+      - name: DROP_CAPS
+        value: KILL,MKNOD,SETGID,SETUID
+      image: registry.reg-aws.openshift.com:443/openshift3/ose-docker-builder:v3.11.82
+      imagePullPolicy: Always
+      name: manage-dockerfile
+      resources:
+        limits:
+          cpu: "1"
+          memory: 512Mi
+        requests:
+          cpu: 20m
+          memory: 256Mi
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: FallbackToLogsOnError
+      volumeMounts:
+      - mountPath: /tmp/build
+        name: buildworkdir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: builder-token-fwdp6
+        readOnly: true
+    nodeName: ip-172-31-48-227.us-west-2.compute.internal
+    nodeSelector:
+      type: compute
+    priority: 0
+    restartPolicy: Never
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: builder
+    serviceAccountName: builder
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoSchedule
+      key: node.kubernetes.io/memory-pressure
+      operator: Exists
+    volumes:
+    - emptyDir: {}
+      name: buildworkdir
+    - hostPath:
+        path: /var/run/docker.sock
+        type: ""
+      name: docker-socket
+    - hostPath:
+        path: /var/run/crio/crio.sock
+        type: ""
+      name: crio-socket
+    - name: builder-dockercfg-75l52-push
+      secret:
+        defaultMode: 384
+        secretName: builder-dockercfg-75l52
+    - name: builder-dockercfg-75l52-pull
+      secret:
+        defaultMode: 384
+        secretName: builder-dockercfg-75l52
+    - name: builder-token-fwdp6
+      secret:
+        defaultMode: 420
+        secretName: builder-token-fwdp6
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: 2019-04-09T09:17:46Z
+      reason: PodCompleted
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: 2019-04-09T09:19:20Z
+      reason: PodCompleted
+      status: "False"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: null
+      reason: PodCompleted
+      status: "False"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: 2019-04-09T09:17:34Z
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: cri-o://30a48a16cc639a61e4e2d6fca4661d3d3f91c7059edab90156ebeaf5852805c4
+      image: registry.reg-aws.openshift.com:443/openshift3/ose-docker-builder:v3.11.82
+      imageID: registry.reg-aws.openshift.com:443/openshift3/ose-docker-builder@sha256:0f7a13f9afdde93c205d890fb9655bd4c1f4de22264724011d2315ce45ada11d
+      lastState: {}
+      name: sti-build
+      ready: false
+      restartCount: 0
+      state:
+        terminated:
+          containerID: cri-o://30a48a16cc639a61e4e2d6fca4661d3d3f91c7059edab90156ebeaf5852805c4
+          exitCode: 0
+          finishedAt: 2019-04-09T09:19:19Z
+          reason: Completed
+          startedAt: 2019-04-09T09:17:49Z
+    hostIP: 172.31.48.227
+    initContainerStatuses:
+    - containerID: cri-o://614e50a419fa3dab36d30b238bf9a99603d7aa672260d113ccc3420133780205
+      image: registry.reg-aws.openshift.com:443/openshift3/ose-docker-builder:v3.11.82
+      imageID: registry.reg-aws.openshift.com:443/openshift3/ose-docker-builder@sha256:0f7a13f9afdde93c205d890fb9655bd4c1f4de22264724011d2315ce45ada11d
+      lastState: {}
+      name: git-clone
+      ready: true
+      restartCount: 0
+      state:
+        terminated:
+          containerID: cri-o://614e50a419fa3dab36d30b238bf9a99603d7aa672260d113ccc3420133780205
+          exitCode: 0
+          finishedAt: 2019-04-09T09:17:42Z
+          reason: Completed
+          startedAt: 2019-04-09T09:17:40Z
+    - containerID: cri-o://653f4437f8fcfcd922f446e267f249b727f7c9d41af4ce8401fa9691d3a3b8ce
+      image: registry.reg-aws.openshift.com:443/openshift3/ose-docker-builder:v3.11.82
+      imageID: registry.reg-aws.openshift.com:443/openshift3/ose-docker-builder@sha256:0f7a13f9afdde93c205d890fb9655bd4c1f4de22264724011d2315ce45ada11d
+      lastState: {}
+      name: manage-dockerfile
+      ready: true
+      restartCount: 0
+      state:
+        terminated:
+          containerID: cri-o://653f4437f8fcfcd922f446e267f249b727f7c9d41af4ce8401fa9691d3a3b8ce
+          exitCode: 0
+          finishedAt: 2019-04-09T09:17:46Z
+          reason: Completed
+          startedAt: 2019-04-09T09:17:45Z
+    phase: Succeeded
+    podIP: 10.128.2.216
+    qosClass: Burstable
+    startTime: 2019-04-09T09:17:34Z
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      kubernetes.io/limit-ranger: 'LimitRanger plugin set: cpu, memory request for
+        container nodejs-ex; cpu, memory limit for container nodejs-ex'
+      openshift.io/deployment-config.latest-version: "1"
+      openshift.io/deployment-config.name: nodejs-ex
+      openshift.io/deployment.name: nodejs-ex-1
+      openshift.io/generated-by: OpenShiftNewApp
+      openshift.io/scc: restricted
+    creationTimestamp: 2019-04-09T09:19:24Z
+    generateName: nodejs-ex-1-
+    labels:
+      app: nodejs-ex
+      deployment: nodejs-ex-1
+      deploymentconfig: nodejs-ex
+    name: nodejs-ex-1-m58rl
+    namespace: youpi
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicationController
+      name: nodejs-ex-1
+      uid: 8de5e2bf-5aa8-11e9-ba57-0ab8769191d3
+    resourceVersion: "3529586147"
+    selfLink: /api/v1/namespaces/youpi/pods/nodejs-ex-1-m58rl
+    uid: 90d7a530-5aa8-11e9-ba57-0ab8769191d3
+  spec:
+    containers:
+    - image: 172.30.254.23:5000/youpi/nodejs-ex@sha256:849bfd8d3dee4d6c39a413578c8052ae537b831d2f659c32e32506382dfd5a7a
+      imagePullPolicy: Always
+      name: nodejs-ex
+      ports:
+      - containerPort: 8080
+        protocol: TCP
+      resources:
+        limits:
+          cpu: "1"
+          memory: 512Mi
+        requests:
+          cpu: 20m
+          memory: 256Mi
+      securityContext:
+        capabilities:
+          drop:
+          - KILL
+          - MKNOD
+          - NET_RAW
+          - SETGID
+          - SETUID
+        runAsUser: 1047180000
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-f6t9g
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    imagePullSecrets:
+    - name: default-dockercfg-ps6hc
+    nodeName: ip-172-31-48-227.us-west-2.compute.internal
+    nodeSelector:
+      type: compute
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext:
+      fsGroup: 1047180000
+      seLinuxOptions:
+        level: s0:c217,c154
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoSchedule
+      key: node.kubernetes.io/memory-pressure
+      operator: Exists
+    volumes:
+    - name: default-token-f6t9g
+      secret:
+        defaultMode: 420
+        secretName: default-token-f6t9g
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: 2019-04-09T09:19:24Z
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: 2019-04-09T09:19:31Z
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: null
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: 2019-04-09T09:19:24Z
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: cri-o://a2696be4b0e776834f79534a545e248cf1e264f99ea1aa34965de3c5c5c5cb98
+      image: 172.30.254.23:5000/youpi/nodejs-ex@sha256:849bfd8d3dee4d6c39a413578c8052ae537b831d2f659c32e32506382dfd5a7a
+      imageID: 172.30.254.23:5000/youpi/nodejs-ex@sha256:849bfd8d3dee4d6c39a413578c8052ae537b831d2f659c32e32506382dfd5a7a
+      lastState: {}
+      name: nodejs-ex
+      ready: true
+      restartCount: 0
+      state:
+        running:
+          startedAt: 2019-04-09T09:19:30Z
+    hostIP: 172.31.48.227
+    phase: Running
+    podIP: 10.128.2.221
+    qosClass: Burstable
+    startTime: 2019-04-09T09:19:24Z
+- apiVersion: v1
+  kind: ReplicationController
+  metadata:
+    annotations:
+      openshift.io/deployer-pod.completed-at: 2019-04-09 09:19:32 +0000 UTC
+      openshift.io/deployer-pod.created-at: 2019-04-09 09:19:19 +0000 UTC
+      openshift.io/deployer-pod.name: nodejs-ex-1-deploy
+      openshift.io/deployment-config.latest-version: "1"
+      openshift.io/deployment-config.name: nodejs-ex
+      openshift.io/deployment.phase: Complete
+      openshift.io/deployment.replicas: "1"
+      openshift.io/deployment.status-reason: config change
+      openshift.io/encoded-deployment-config: |
+        {"kind":"DeploymentConfig","apiVersion":"apps.openshift.io/v1","metadata":{"name":"nodejs-ex","namespace":"youpi","selfLink":"/apis/apps.openshift.io/v1/namespaces/youpi/deploymentconfigs/nodejs-ex","uid":"4f47e7d9-5aa8-11e9-b1ce-0a69cdf75e6f","resourceVersion":"3529585751","generation":2,"creationTimestamp":"2019-04-09T09:17:34Z","labels":{"app":"nodejs-ex"},"annotations":{"openshift.io/generated-by":"OpenShiftNewApp"}},"spec":{"strategy":{"type":"Rolling","rollingParams":{"updatePeriodSeconds":1,"intervalSeconds":1,"timeoutSeconds":600,"maxUnavailable":"25%","maxSurge":"25%"},"resources":{},"activeDeadlineSeconds":21600},"triggers":[{"type":"ConfigChange"},{"type":"ImageChange","imageChangeParams":{"automatic":true,"containerNames":["nodejs-ex"],"from":{"kind":"ImageStreamTag","namespace":"youpi","name":"nodejs-ex:latest"},"lastTriggeredImage":"172.30.254.23:5000/youpi/nodejs-ex@sha256:849bfd8d3dee4d6c39a413578c8052ae537b831d2f659c32e32506382dfd5a7a"}}],"replicas":1,"revisionHistoryLimit":10,"test":false,"selector":{"app":"nodejs-ex","deploymentconfig":"nodejs-ex"},"template":{"metadata":{"creationTimestamp":null,"labels":{"app":"nodejs-ex","deploymentconfig":"nodejs-ex"},"annotations":{"openshift.io/generated-by":"OpenShiftNewApp"}},"spec":{"containers":[{"name":"nodejs-ex","image":"172.30.254.23:5000/youpi/nodejs-ex@sha256:849bfd8d3dee4d6c39a413578c8052ae537b831d2f659c32e32506382dfd5a7a","ports":[{"containerPort":8080,"protocol":"TCP"}],"resources":{},"terminationMessagePath":"/dev/termination-log","terminationMessagePolicy":"File","imagePullPolicy":"Always"}],"restartPolicy":"Always","terminationGracePeriodSeconds":30,"dnsPolicy":"ClusterFirst","securityContext":{},"schedulerName":"default-scheduler"}}},"status":{"latestVersion":1,"observedGeneration":1,"replicas":0,"updatedReplicas":0,"availableReplicas":0,"unavailableReplicas":0,"details":{"message":"config change","causes":[{"type":"ConfigChange"}]},"conditions":[{"type":"Available","status":"False","lastUpdateTime":"2019-04-09T09:17:34Z","lastTransitionTime":"2019-04-09T09:17:34Z","message":"Deployment config does not have minimum availability."}]}}
+    creationTimestamp: 2019-04-09T09:19:19Z
+    generation: 2
+    labels:
+      app: nodejs-ex
+      openshift.io/deployment-config.name: nodejs-ex
+    name: nodejs-ex-1
+    namespace: youpi
+    ownerReferences:
+    - apiVersion: apps.openshift.io/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: DeploymentConfig
+      name: nodejs-ex
+      uid: 4f47e7d9-5aa8-11e9-b1ce-0a69cdf75e6f
+    resourceVersion: "3529586180"
+    selfLink: /api/v1/namespaces/youpi/replicationcontrollers/nodejs-ex-1
+    uid: 8de5e2bf-5aa8-11e9-ba57-0ab8769191d3
+  spec:
+    replicas: 1
+    selector:
+      app: nodejs-ex
+      deployment: nodejs-ex-1
+      deploymentconfig: nodejs-ex
+    template:
+      metadata:
+        annotations:
+          openshift.io/deployment-config.latest-version: "1"
+          openshift.io/deployment-config.name: nodejs-ex
+          openshift.io/deployment.name: nodejs-ex-1
+          openshift.io/generated-by: OpenShiftNewApp
+        creationTimestamp: null
+        labels:
+          app: nodejs-ex
+          deployment: nodejs-ex-1
+          deploymentconfig: nodejs-ex
+      spec:
+        containers:
+        - image: 172.30.254.23:5000/youpi/nodejs-ex@sha256:849bfd8d3dee4d6c39a413578c8052ae537b831d2f659c32e32506382dfd5a7a
+          imagePullPolicy: Always
+          name: nodejs-ex
+          ports:
+          - containerPort: 8080
+            protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    fullyLabeledReplicas: 1
+    observedGeneration: 2
+    readyReplicas: 1
+    replicas: 1
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftNewApp
+    creationTimestamp: 2019-04-09T09:17:34Z
+    labels:
+      app: nodejs-ex
+    name: nodejs-ex
+    namespace: youpi
+    resourceVersion: "3529582879"
+    selfLink: /api/v1/namespaces/youpi/services/nodejs-ex
+    uid: 4f688e04-5aa8-11e9-b1ce-0a69cdf75e6f
+  spec:
+    clusterIP: 172.30.195.252
+    ports:
+    - name: 8080-tcp
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+    selector:
+      app: nodejs-ex
+      deploymentconfig: nodejs-ex
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: apps.openshift.io/v1
+  kind: DeploymentConfig
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftNewApp
+    creationTimestamp: 2019-04-09T09:17:34Z
+    generation: 2
+    labels:
+      app: nodejs-ex
+    name: nodejs-ex
+    namespace: youpi
+    resourceVersion: "3529586183"
+    selfLink: /apis/apps.openshift.io/v1/namespaces/youpi/deploymentconfigs/nodejs-ex
+    uid: 4f47e7d9-5aa8-11e9-b1ce-0a69cdf75e6f
+  spec:
+    replicas: 1
+    revisionHistoryLimit: 10
+    selector:
+      app: nodejs-ex
+      deploymentconfig: nodejs-ex
+    strategy:
+      activeDeadlineSeconds: 21600
+      resources: {}
+      rollingParams:
+        intervalSeconds: 1
+        maxSurge: 25%
+        maxUnavailable: 25%
+        timeoutSeconds: 600
+        updatePeriodSeconds: 1
+      type: Rolling
+    template:
+      metadata:
+        annotations:
+          openshift.io/generated-by: OpenShiftNewApp
+        creationTimestamp: null
+        labels:
+          app: nodejs-ex
+          deploymentconfig: nodejs-ex
+      spec:
+        containers:
+        - image: 172.30.254.23:5000/youpi/nodejs-ex@sha256:849bfd8d3dee4d6c39a413578c8052ae537b831d2f659c32e32506382dfd5a7a
+          imagePullPolicy: Always
+          name: nodejs-ex
+          ports:
+          - containerPort: 8080
+            protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+    test: false
+    triggers:
+    - type: ConfigChange
+    - imageChangeParams:
+        automatic: true
+        containerNames:
+        - nodejs-ex
+        from:
+          kind: ImageStreamTag
+          name: nodejs-ex:latest
+          namespace: youpi
+        lastTriggeredImage: 172.30.254.23:5000/youpi/nodejs-ex@sha256:849bfd8d3dee4d6c39a413578c8052ae537b831d2f659c32e32506382dfd5a7a
+      type: ImageChange
+  status:
+    availableReplicas: 1
+    conditions:
+    - lastTransitionTime: 2019-04-09T09:19:31Z
+      lastUpdateTime: 2019-04-09T09:19:31Z
+      message: Deployment config has minimum availability.
+      status: "True"
+      type: Available
+    - lastTransitionTime: 2019-04-09T09:19:32Z
+      lastUpdateTime: 2019-04-09T09:19:32Z
+      message: replication controller "nodejs-ex-1" successfully rolled out
+      reason: NewReplicationControllerAvailable
+      status: "True"
+      type: Progressing
+    details:
+      causes:
+      - type: ConfigChange
+      message: config change
+    latestVersion: 1
+    observedGeneration: 2
+    readyReplicas: 1
+    replicas: 1
+    unavailableReplicas: 0
+    updatedReplicas: 1
+- apiVersion: build.openshift.io/v1
+  kind: BuildConfig
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftNewApp
+    creationTimestamp: 2019-04-09T09:17:34Z
+    labels:
+      app: nodejs-ex
+    name: nodejs-ex
+    namespace: youpi
+    resourceVersion: "3529582849"
+    selfLink: /apis/build.openshift.io/v1/namespaces/youpi/buildconfigs/nodejs-ex
+    uid: 4f26b514-5aa8-11e9-b1ce-0a69cdf75e6f
+  spec:
+    failedBuildsHistoryLimit: 5
+    nodeSelector: null
+    output:
+      to:
+        kind: ImageStreamTag
+        name: nodejs-ex:latest
+    postCommit: {}
+    resources: {}
+    runPolicy: Serial
+    source:
+      git:
+        uri: https://github.com/xavierdpt/nodejs-ex
+      type: Git
+    strategy:
+      sourceStrategy:
+        from:
+          kind: ImageStreamTag
+          name: nodejs:10
+          namespace: openshift
+      type: Source
+    successfulBuildsHistoryLimit: 5
+    triggers:
+    - github:
+        secret: CoqlERBtZuMmIh5PYvm0
+      type: GitHub
+    - generic:
+        secret: BAp3uMwxm1PdA5mYrf5u
+      type: Generic
+    - type: ConfigChange
+    - imageChange:
+        lastTriggeredImageID: docker-registry.default.svc:5000/openshift/nodejs@sha256:b155814ac48feed9667b590a73f090367cbd7f64e34aaeb4dc70bfc8a4963ace
+      type: ImageChange
+  status:
+    lastVersion: 1
+- apiVersion: build.openshift.io/v1
+  kind: Build
+  metadata:
+    annotations:
+      openshift.io/build-config.name: nodejs-ex
+      openshift.io/build.number: "1"
+      openshift.io/build.pod-name: nodejs-ex-1-build
+    creationTimestamp: 2019-04-09T09:17:34Z
+    labels:
+      app: nodejs-ex
+      buildconfig: nodejs-ex
+      openshift.io/build-config.name: nodejs-ex
+      openshift.io/build.start-policy: Serial
+    name: nodejs-ex-1
+    namespace: youpi
+    ownerReferences:
+    - apiVersion: build.openshift.io/v1
+      controller: true
+      kind: BuildConfig
+      name: nodejs-ex
+      uid: 4f26b514-5aa8-11e9-b1ce-0a69cdf75e6f
+    resourceVersion: "3529585827"
+    selfLink: /apis/build.openshift.io/v1/namespaces/youpi/builds/nodejs-ex-1
+    uid: 4f2df721-5aa8-11e9-ba57-0ab8769191d3
+  spec:
+    nodeSelector: null
+    output:
+      pushSecret:
+        name: builder-dockercfg-75l52
+      to:
+        kind: ImageStreamTag
+        name: nodejs-ex:latest
+    postCommit: {}
+    resources: {}
+    revision:
+      git:
+        author:
+          email: xavierdpt@gmail.com
+          name: xavierdpt@gmail.com
+        commit: a8200504cf1ef73d94737c42c7a36b2bf4b0faa9
+        committer:
+          email: xavierdpt@gmail.com
+          name: xavierdpt@gmail.com
+        message: .
+      type: Git
+    serviceAccount: builder
+    source:
+      git:
+        uri: https://github.com/xavierdpt/nodejs-ex
+      type: Git
+    strategy:
+      sourceStrategy:
+        from:
+          kind: DockerImage
+          name: docker-registry.default.svc:5000/openshift/nodejs@sha256:b155814ac48feed9667b590a73f090367cbd7f64e34aaeb4dc70bfc8a4963ace
+        pullSecret:
+          name: builder-dockercfg-75l52
+      type: Source
+    triggeredBy:
+    - imageChangeBuild:
+        fromRef:
+          kind: ImageStreamTag
+          name: nodejs:10
+          namespace: openshift
+        imageID: docker-registry.default.svc:5000/openshift/nodejs@sha256:b155814ac48feed9667b590a73f090367cbd7f64e34aaeb4dc70bfc8a4963ace
+      message: Image change
+  status:
+    completionTimestamp: 2019-04-09T09:19:20Z
+    config:
+      kind: BuildConfig
+      name: nodejs-ex
+      namespace: youpi
+    duration: 106000000000
+    output:
+      to:
+        imageDigest: sha256:849bfd8d3dee4d6c39a413578c8052ae537b831d2f659c32e32506382dfd5a7a
+    outputDockerImageReference: docker-registry.default.svc:5000/youpi/nodejs-ex:latest
+    phase: Complete
+    stages:
+    - durationMilliseconds: 1056
+      name: FetchInputs
+      startTime: 2019-04-09T09:17:41Z
+      steps:
+      - durationMilliseconds: 1056
+        name: FetchGitSource
+        startTime: 2019-04-09T09:17:41Z
+    - durationMilliseconds: 1613
+      name: CommitContainer
+      startTime: 2019-04-09T09:18:09Z
+      steps:
+      - durationMilliseconds: 1613
+        name: CommitContainer
+        startTime: 2019-04-09T09:18:09Z
+    - durationMilliseconds: 20477
+      name: Assemble
+      startTime: 2019-04-09T09:17:50Z
+      steps:
+      - durationMilliseconds: 20477
+        name: AssembleBuildScripts
+        startTime: 2019-04-09T09:17:50Z
+    - durationMilliseconds: 68333
+      name: PushImage
+      startTime: 2019-04-09T09:18:10Z
+      steps:
+      - durationMilliseconds: 68333
+        name: PushImage
+        startTime: 2019-04-09T09:18:10Z
+    startTimestamp: 2019-04-09T09:17:34Z
+- apiVersion: image.openshift.io/v1
+  kind: ImageStream
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftNewApp
+    creationTimestamp: 2019-04-09T09:17:33Z
+    generation: 1
+    labels:
+      app: nodejs-ex
+    name: nodejs-ex
+    namespace: youpi
+    resourceVersion: "3529585749"
+    selfLink: /apis/image.openshift.io/v1/namespaces/youpi/imagestreams/nodejs-ex
+    uid: 4f063883-5aa8-11e9-b1ce-0a69cdf75e6f
+  spec:
+    lookupPolicy:
+      local: false
+  status:
+    dockerImageRepository: docker-registry.default.svc:5000/youpi/nodejs-ex
+    tags:
+    - items:
+      - created: 2019-04-09T09:19:19Z
+        dockerImageReference: 172.30.254.23:5000/youpi/nodejs-ex@sha256:849bfd8d3dee4d6c39a413578c8052ae537b831d2f659c32e32506382dfd5a7a
+        generation: 1
+        image: sha256:849bfd8d3dee4d6c39a413578c8052ae537b831d2f659c32e32506382dfd5a7a
+      tag: latest
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
