@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'df / -h'
+                timeout(time:1, unit:'MINUTES') {
+					sh 'sleep 60000'
+				}
             }
         }
     }
