@@ -1,0 +1,17 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app: nodejs-mongodb-example
+  name: nodejs-mongodb-example
+spec:
+  host: ""
+  port:
+    targetPort: 8080-tcp
+  to:
+    kind: ""
+    name: nodejs-mongodb-example
+    weight: null
+status:
+  ingress: null

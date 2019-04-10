@@ -1,0 +1,41 @@
+  apiVersion: build.openshift.io/v1
+  kind: BuildConfig
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftNewApp
+    creationTimestamp: null
+    labels:
+      app: nodejs-mongodb-example
+    name: nodejs-mongodb-example
+  spec:
+    nodeSelector: null
+    output:
+      to:
+        kind: ImageStreamTag
+        name: nodejs-mongodb-example:latest
+    postCommit: {}
+    resources: {}
+    source:
+      contextDir: nodejs
+      git:
+        uri: https://github.com/xavierdpt/nodejs-ex
+      type: Git
+    strategy:
+      sourceStrategy:
+        from:
+          kind: ImageStreamTag
+          name: nodejs:10
+          namespace: openshift
+      type: Source
+    triggers:
+    - github:
+        secret: VIafOREsozisJzYPsgdT
+      type: GitHub
+    - generic:
+        secret: Zusj5swLsRj0P4_qea1s
+      type: Generic
+    - type: ConfigChange
+    - imageChange: {}
+      type: ImageChange
+  status:
+    lastVersion: 0

@@ -1,0 +1,22 @@
+# Create new project
+oc new-project youpi
+
+# Create a new app with context dir
+oc new-app https://github.com/xavierdpt/nodejs-ex --name nodejs-mongodb-example --context-dir=nodejs
+
+# Create new app as yaml
+oc new-app https://github.com/xavierdpt/nodejs-ex --name nodejs-mongodb-example --context-dir=nodejs --output=yaml >creation.yaml
+
+# Create from yaml files
+oc create -f node\buildConfig.yaml,node\deploymentConfig.yaml,node\imageStream.yaml,node\service.yaml,mongo\deploymentConfig.yaml,mongo\persistentVolumeClaim.yaml,mongo\secret.yaml,mongo\service.yaml
+
+# Set environment variable
+oc set env dc/nodejs-mongodb-example MONGO_URL='mongodb://admin:secret@mongodb:27017/sampledb'
+
+# Ceate project from beyond the basics with context dir
+oc new-app https://github.com/xavierdpt/nodejs-ex --name nodejs-mongodb-example --context-dir=nodejs
+oc expose service/nodejs-mongodb-example
+oc new-app mongodb-persistent -p MONGODB_USER=admin -p MONGODB_PASSWORD=secret -p MONGODB_ADMIN_PASSWORD=super-secret
+oc set env dc/nodejs-mongodb-example MONGO_URL="mongodb://admin:secret@mongodb:27017/sampledb"
+
+oc new-app https://github.com/xavierdpt/nodejs-ex --context-dir=nodejs/openshift/pipeline --name nodejs-ex-pipeline --dry-run --output=yaml

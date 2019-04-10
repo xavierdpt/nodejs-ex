@@ -1,0 +1,32 @@
+  apiVersion: build.openshift.io/v1
+  kind: BuildConfig
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftNewApp
+    creationTimestamp: null
+    labels:
+      app: nodejs-ex-pipeline
+    name: nodejs-ex-pipeline
+  spec:
+    nodeSelector: null
+    output: {}
+    postCommit: {}
+    resources: {}
+    source:
+      contextDir: nodejs/openshift/pipeline
+      git:
+        uri: https://github.com/xavierdpt/nodejs-ex
+      type: Git
+    strategy:
+      jenkinsPipelineStrategy: {}
+      type: JenkinsPipeline
+    triggers:
+    - github:
+        secret: Zjj5tyJBGJRakVJ6tjel
+      type: GitHub
+    - generic:
+        secret: 3ZmQguG4zwrHb3fuzW70
+      type: Generic
+    - type: ConfigChange
+  status:
+    lastVersion: 0

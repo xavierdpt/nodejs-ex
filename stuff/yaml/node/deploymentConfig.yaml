@@ -1,0 +1,53 @@
+  apiVersion: apps.openshift.io/v1
+  kind: DeploymentConfig
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftNewApp
+    creationTimestamp: null
+    labels:
+      app: nodejs-mongodb-example
+    name: nodejs-mongodb-example
+  spec:
+    replicas: 1
+    selector:
+      app: nodejs-mongodb-example
+      deploymentconfig: nodejs-mongodb-example
+    strategy:
+      resources: {}
+    template:
+      metadata:
+        annotations:
+          openshift.io/generated-by: OpenShiftNewApp
+        creationTimestamp: null
+        labels:
+          app: nodejs-mongodb-example
+          deploymentconfig: nodejs-mongodb-example
+      spec:
+        containers:
+        - env:
+          - name: MONGO_URL
+            value: 'mongodb://admin:secret@mongodb:27017/sampledb'
+          image: nodejs-mongodb-example:latest
+          name: nodejs-mongodb-example
+          ports:
+          - containerPort: 8080
+            protocol: TCP
+          resources: {}
+    test: false
+    triggers:
+    - type: ConfigChange
+    - imageChangeParams:
+        automatic: true
+        containerNames:
+        - nodejs-mongodb-example
+        from:
+          kind: ImageStreamTag
+          name: nodejs-mongodb-example:latest
+      type: ImageChange
+  status:
+    availableReplicas: 0
+    latestVersion: 0
+    observedGeneration: 0
+    replicas: 0
+    unavailableReplicas: 0
+    updatedReplicas: 0
