@@ -1,0 +1,8 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    tty <boolean>
+
+DESCRIPTION:
+     Whether this container should allocate a TTY for itself, also requires
+     'stdin' to be true. Default is false.

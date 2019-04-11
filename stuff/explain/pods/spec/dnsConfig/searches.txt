@@ -1,0 +1,9 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    searches <[]string>
+
+DESCRIPTION:
+     A list of DNS search domains for host-name lookup. This will be appended to
+     the base search paths generated from DNSPolicy. Duplicated search paths
+     will be removed.

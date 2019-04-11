@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    path <string>
+
+DESCRIPTION:
+     Path to access on the HTTP server.

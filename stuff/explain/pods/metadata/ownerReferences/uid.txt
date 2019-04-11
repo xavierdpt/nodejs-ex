@@ -1,0 +1,8 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    uid <string>
+
+DESCRIPTION:
+     UID of the referent. More info:
+     http://kubernetes.io/docs/user-guide/identifiers#uids

@@ -1,0 +1,18 @@
+KIND:     Pod
+VERSION:  v1
+
+RESOURCE: capabilities <Object>
+
+DESCRIPTION:
+     The capabilities to add/drop when running containers. Defaults to the
+     default set of capabilities granted by the container runtime.
+
+     Adds and removes POSIX capabilities from running containers.
+
+FIELDS:
+   add	<[]string>
+     Added capabilities
+
+   drop	<[]string>
+     Removed capabilities
+

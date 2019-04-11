@@ -1,0 +1,31 @@
+KIND:     Pod
+VERSION:  v1
+
+RESOURCE: volumeMounts <[]Object>
+
+DESCRIPTION:
+     Pod volumes to mount into the container's filesystem. Cannot be updated.
+
+     VolumeMount describes a mounting of a Volume within a container.
+
+FIELDS:
+   mountPath	<string> -required-
+     Path within the container at which the volume should be mounted. Must not
+     contain ':'.
+
+   mountPropagation	<string>
+     mountPropagation determines how mounts are propagated from the host to
+     container and the other way around. When not set, MountPropagationNone is
+     used. This field is beta in 1.10.
+
+   name	<string> -required-
+     This must match the Name of a Volume.
+
+   readOnly	<boolean>
+     Mounted read-only if true, read-write otherwise (false or unspecified).
+     Defaults to false.
+
+   subPath	<string>
+     Path within the volume from which the container's volume should be mounted.
+     Defaults to "" (volume's root).
+

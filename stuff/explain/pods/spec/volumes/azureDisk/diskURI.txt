@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    diskURI <string>
+
+DESCRIPTION:
+     The URI the data disk in the blob storage

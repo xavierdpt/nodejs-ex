@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    user <string>
+
+DESCRIPTION:
+     User is a SELinux user label that applies to the container.

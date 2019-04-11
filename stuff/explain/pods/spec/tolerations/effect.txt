@@ -1,0 +1,9 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    effect <string>
+
+DESCRIPTION:
+     Effect indicates the taint effect to match. Empty means match all taint
+     effects. When specified, allowed values are NoSchedule, PreferNoSchedule
+     and NoExecute.

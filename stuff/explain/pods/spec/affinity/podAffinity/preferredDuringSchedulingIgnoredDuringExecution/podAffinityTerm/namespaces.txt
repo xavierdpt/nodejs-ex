@@ -1,0 +1,8 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    namespaces <[]string>
+
+DESCRIPTION:
+     namespaces specifies which namespaces the labelSelector applies to (matches
+     against); null or empty list means "this pod's namespace"

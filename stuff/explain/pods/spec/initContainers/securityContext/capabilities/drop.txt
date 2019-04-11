@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    drop <[]string>
+
+DESCRIPTION:
+     Removed capabilities

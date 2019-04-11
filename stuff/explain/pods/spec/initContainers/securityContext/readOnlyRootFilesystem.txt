@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    readOnlyRootFilesystem <boolean>
+
+DESCRIPTION:
+     Whether this container has a read-only root filesystem. Default is false.

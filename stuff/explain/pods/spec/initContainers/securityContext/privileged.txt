@@ -1,0 +1,8 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    privileged <boolean>
+
+DESCRIPTION:
+     Run container in privileged mode. Processes in privileged containers are
+     essentially equivalent to root on the host. Defaults to false.

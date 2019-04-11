@@ -1,0 +1,8 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    devicePath <string>
+
+DESCRIPTION:
+     devicePath is the path inside of the container that the device will be
+     mapped to.

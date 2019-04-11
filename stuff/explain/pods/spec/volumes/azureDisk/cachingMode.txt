@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    cachingMode <string>
+
+DESCRIPTION:
+     Host Caching mode: None, Read Only, Read Write.

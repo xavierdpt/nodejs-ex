@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    add <[]string>
+
+DESCRIPTION:
+     Added capabilities

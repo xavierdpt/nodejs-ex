@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    hostIPC <boolean>
+
+DESCRIPTION:
+     Use the host's ipc namespace. Optional: Default to false.

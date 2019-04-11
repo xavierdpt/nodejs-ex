@@ -1,0 +1,9 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    successThreshold <integer>
+
+DESCRIPTION:
+     Minimum consecutive successes for the probe to be considered successful
+     after having failed. Defaults to 1. Must be 1 for liveness. Minimum value
+     is 1.

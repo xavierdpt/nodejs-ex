@@ -1,0 +1,19 @@
+KIND:     Pod
+VERSION:  v1
+
+RESOURCE: options <[]Object>
+
+DESCRIPTION:
+     A list of DNS resolver options. This will be merged with the base options
+     generated from DNSPolicy. Duplicated entries will be removed. Resolution
+     options given in Options will override those that appear in the base
+     DNSPolicy.
+
+     PodDNSConfigOption defines DNS resolver options of a pod.
+
+FIELDS:
+   name	<string>
+     Required.
+
+   value	<string>
+

@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    level <string>
+
+DESCRIPTION:
+     Level is SELinux level label that applies to the container.

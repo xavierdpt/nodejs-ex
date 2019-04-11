@@ -1,0 +1,19 @@
+KIND:     Pod
+VERSION:  v1
+
+RESOURCE: volumeDevices <[]Object>
+
+DESCRIPTION:
+     volumeDevices is the list of block devices to be used by the container.
+     This is an alpha feature and may change in the future.
+
+     volumeDevice describes a mapping of a raw block device within a container.
+
+FIELDS:
+   devicePath	<string> -required-
+     devicePath is the path inside of the container that the device will be
+     mapped to.
+
+   name	<string> -required-
+     name must match the name of a persistentVolumeClaim in the pod
+

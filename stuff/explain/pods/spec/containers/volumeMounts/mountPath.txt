@@ -1,0 +1,8 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    mountPath <string>
+
+DESCRIPTION:
+     Path within the container at which the volume should be mounted. Must not
+     contain ':'.

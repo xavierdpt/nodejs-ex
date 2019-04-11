@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    name <string>
+
+DESCRIPTION:
+     Name of the environment variable. Must be a C_IDENTIFIER.

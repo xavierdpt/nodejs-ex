@@ -1,0 +1,6 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    value <string>
+
+DESCRIPTION:

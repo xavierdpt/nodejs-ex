@@ -1,0 +1,8 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    kind <string>
+
+DESCRIPTION:
+     Kind of the referent. More info:
+     https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds

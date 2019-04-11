@@ -1,0 +1,9 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    limits <map[string]string>
+
+DESCRIPTION:
+     Limits describes the maximum amount of compute resources allowed. More
+     info:
+     https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/

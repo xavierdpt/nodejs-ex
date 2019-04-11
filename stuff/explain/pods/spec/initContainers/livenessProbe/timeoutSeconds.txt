@@ -1,0 +1,9 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    timeoutSeconds <integer>
+
+DESCRIPTION:
+     Number of seconds after which the probe times out. Defaults to 1 second.
+     Minimum value is 1. More info:
+     https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes

@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    value <string>
+
+DESCRIPTION:
+     The header field value

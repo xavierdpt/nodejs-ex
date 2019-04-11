@@ -1,0 +1,9 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    restartPolicy <string>
+
+DESCRIPTION:
+     Restart policy for all containers within the pod. One of Always, OnFailure,
+     Never. Default to Always. More info:
+     https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#restart-policy

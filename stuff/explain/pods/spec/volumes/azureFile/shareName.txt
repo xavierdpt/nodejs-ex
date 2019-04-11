@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    shareName <string>
+
+DESCRIPTION:
+     Share Name

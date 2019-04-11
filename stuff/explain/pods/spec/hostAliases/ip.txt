@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    ip <string>
+
+DESCRIPTION:
+     IP address of the host file entry.

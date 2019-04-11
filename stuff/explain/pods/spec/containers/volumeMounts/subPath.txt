@@ -1,0 +1,8 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    subPath <string>
+
+DESCRIPTION:
+     Path within the volume from which the container's volume should be mounted.
+     Defaults to "" (volume's root).

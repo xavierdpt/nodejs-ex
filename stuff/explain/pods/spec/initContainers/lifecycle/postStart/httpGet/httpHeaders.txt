@@ -1,0 +1,17 @@
+KIND:     Pod
+VERSION:  v1
+
+RESOURCE: httpHeaders <[]Object>
+
+DESCRIPTION:
+     Custom headers to set in the request. HTTP allows repeated headers.
+
+     HTTPHeader describes a custom header to be used in HTTP probes
+
+FIELDS:
+   name	<string> -required-
+     The header field name
+
+   value	<string> -required-
+     The header field value
+

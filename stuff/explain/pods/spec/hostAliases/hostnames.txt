@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    hostnames <[]string>
+
+DESCRIPTION:
+     Hostnames for the above IP address.

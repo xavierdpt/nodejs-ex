@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    key <string>
+
+DESCRIPTION:
+     The key of the secret to select from. Must be a valid secret key.

@@ -1,0 +1,26 @@
+KIND:     Pod
+VERSION:  v1
+
+RESOURCE: postStart <Object>
+
+DESCRIPTION:
+     PostStart is called immediately after a container is created. If the
+     handler fails, the container is terminated and restarted according to its
+     restart policy. Other management of the container blocks until the hook
+     completes. More info:
+     https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks
+
+     Handler defines a specific action that should be taken
+
+FIELDS:
+   exec	<Object>
+     One and only one of the following should be specified. Exec specifies the
+     action to take.
+
+   httpGet	<Object>
+     HTTPGet specifies the http request to perform.
+
+   tcpSocket	<Object>
+     TCPSocket specifies an action involving a TCP port. TCP hooks not yet
+     supported
+

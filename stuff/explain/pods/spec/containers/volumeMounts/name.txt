@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    name <string>
+
+DESCRIPTION:
+     This must match the Name of a Volume.

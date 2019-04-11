@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    hostIP <string>
+
+DESCRIPTION:
+     What host IP to bind the external port to.

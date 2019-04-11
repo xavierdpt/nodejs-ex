@@ -1,0 +1,26 @@
+KIND:     Pod
+VERSION:  v1
+
+RESOURCE: envFrom <[]Object>
+
+DESCRIPTION:
+     List of sources to populate environment variables in the container. The
+     keys defined within a source must be a C_IDENTIFIER. All invalid keys will
+     be reported as an event when the container is starting. When a key exists
+     in multiple sources, the value associated with the last source will take
+     precedence. Values defined by an Env with a duplicate key will take
+     precedence. Cannot be updated.
+
+     EnvFromSource represents the source of a set of ConfigMaps
+
+FIELDS:
+   configMapRef	<Object>
+     The ConfigMap to select from
+
+   prefix	<string>
+     An optional identifier to prepend to each key in the ConfigMap. Must be a
+     C_IDENTIFIER.
+
+   secretRef	<Object>
+     The Secret to select from
+

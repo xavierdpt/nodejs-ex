@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    hostPID <boolean>
+
+DESCRIPTION:
+     Use the host's pid namespace. Optional: Default to false.

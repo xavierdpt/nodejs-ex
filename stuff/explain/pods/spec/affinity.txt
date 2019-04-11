@@ -1,0 +1,22 @@
+KIND:     Pod
+VERSION:  v1
+
+RESOURCE: affinity <Object>
+
+DESCRIPTION:
+     If specified, the pod's scheduling constraints
+
+     Affinity is a group of affinity scheduling rules.
+
+FIELDS:
+   nodeAffinity	<Object>
+     Describes node affinity scheduling rules for the pod.
+
+   podAffinity	<Object>
+     Describes pod affinity scheduling rules (e.g. co-locate this pod in the
+     same node, zone, etc. as some other pod(s)).
+
+   podAntiAffinity	<Object>
+     Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod
+     in the same node, zone, etc. as some other pod(s)).
+

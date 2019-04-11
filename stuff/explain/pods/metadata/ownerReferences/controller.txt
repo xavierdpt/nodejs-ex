@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    controller <boolean>
+
+DESCRIPTION:
+     If true, this reference points to the managing controller.

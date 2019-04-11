@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    name <string>
+
+DESCRIPTION:
+     name must match the name of a persistentVolumeClaim in the pod

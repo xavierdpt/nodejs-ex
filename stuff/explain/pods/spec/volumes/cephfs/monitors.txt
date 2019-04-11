@@ -1,0 +1,8 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    monitors <[]string>
+
+DESCRIPTION:
+     Required: Monitors is a collection of Ceph monitors More info:
+     https://releases.k8s.io/HEAD/examples/volumes/cephfs/README.md#how-to-use-it

@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    role <string>
+
+DESCRIPTION:
+     Role is a SELinux role label that applies to the container.

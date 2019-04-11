@@ -1,0 +1,18 @@
+KIND:     Pod
+VERSION:  v1
+
+RESOURCE: sysctls <[]Object>
+
+DESCRIPTION:
+     Sysctls hold a list of namespaced sysctls used for the pod. Pods with
+     unsupported sysctls (by the container runtime) might fail to launch.
+
+     Sysctl defines a kernel parameter to be set
+
+FIELDS:
+   name	<string> -required-
+     Name of a property to set
+
+   value	<string> -required-
+     Value of a property to set
+

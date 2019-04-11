@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    protocol <string>
+
+DESCRIPTION:
+     Protocol for port. Must be UDP or TCP. Defaults to "TCP".

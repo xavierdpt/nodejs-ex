@@ -1,0 +1,19 @@
+KIND:     Pod
+VERSION:  v1
+
+RESOURCE: preference <Object>
+
+DESCRIPTION:
+     A node selector term, associated with the corresponding weight.
+
+     A null or empty node selector term matches no objects. The requirements of
+     them are ANDed. The TopologySelectorTerm type implements a subset of the
+     NodeSelectorTerm.
+
+FIELDS:
+   matchExpressions	<[]Object>
+     A list of node selector requirements by node's labels.
+
+   matchFields	<[]Object>
+     A list of node selector requirements by node's fields.
+

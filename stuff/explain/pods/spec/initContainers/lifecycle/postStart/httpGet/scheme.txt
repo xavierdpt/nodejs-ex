@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    scheme <string>
+
+DESCRIPTION:
+     Scheme to use for connecting to the host. Defaults to HTTP.
