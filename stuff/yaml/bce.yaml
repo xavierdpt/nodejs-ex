@@ -1,0 +1,47 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  creationTimestamp: 2019-04-11T09:30:19Z
+  labels:
+    app: myapp
+  name: myapp-bc
+  namespace: rox
+  resourceVersion: "3534257484"
+  selfLink: /apis/build.openshift.io/v1/namespaces/rox/buildconfigs/myapp-bc
+  uid: 6c3d8f18-5c3c-11e9-ad62-0a69cdf75e6f
+spec:
+  failedBuildsHistoryLimit: 1
+  nodeSelector: null
+  output:
+    to:
+      kind: ImageStreamTag
+      name: myapp-is:latest
+  postCommit: {}
+  resources: {}
+  runPolicy: Serial
+  source:
+    contextDir: nodejs
+    git:
+      uri: https://github.com/xavierdpt/nodejs-ex
+    type: Git
+  strategy:
+    sourceStrategy:
+      from:
+        kind: ImageStreamTag
+        name: nodejs:10
+        namespace: openshift
+    type: Source
+  successfulBuildsHistoryLimit: 2
+  triggers:
+  - github:
+      secret: VIafOREsozisJzYPsgdT
+    type: GitHub
+  - generic:
+      secret: Zusj5swLsRj0P4_qea1s
+    type: Generic
+  - type: ConfigChange
+  - imageChange:
+      lastTriggeredImageID: docker-registry.default.svc:5000/openshift/nodejs@sha256:b155814ac48feed9667b590a73f090367cbd7f64e34aaeb4dc70bfc8a4963ace
+    type: ImageChange
+status:
+  lastVersion: 1

@@ -1,0 +1,39 @@
+  apiVersion: apps.openshift.io/v1
+  kind: DeploymentConfig
+  metadata:
+    labels:
+      app: myapp
+    name: myapp
+  spec:
+    replicas: 1
+    selector:
+      app: myapp
+      deploymentconfig: myapp
+    template:
+      metadata:
+        labels:
+          app: myapp
+          deploymentconfig: myapp
+      spec:
+        containers:
+        - env:
+          - name: MONGO_URL
+            value: mongodb://admin:secret@mongodb:27017/sampledb
+          image: nodejs-mongodb-example:latest
+          imagePullPolicy: Always
+          name: myapp
+          ports:
+          - containerPort: 8080
+            protocol: TCP
+      restartPolicy: Always
+    test: false
+    triggers:
+    - type: ConfigChange
+    - imageChangeParams:
+        automatic: true
+        containerNames:
+        - myapp
+        from:
+          kind: ImageStreamTag
+          name: myapp:latest
+      type: ImageChange

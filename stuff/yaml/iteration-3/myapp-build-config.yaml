@@ -1,0 +1,35 @@
+  apiVersion: build.openshift.io/v1
+  kind: BuildConfig
+  metadata:
+    labels:
+      app: myapp
+    name: myapp-bc
+  spec:
+    failedBuildsHistoryLimit: 1
+    successfulBuildsHistoryLimit: 2
+    output:
+      to:
+        kind: ImageStreamTag
+        name: myapp-is:latest
+    runPolicy: Serial
+    source:
+      contextDir: nodejs
+      git:
+        uri: https://github.com/xavierdpt/nodejs-ex
+      type: Git
+    strategy:
+      sourceStrategy:
+        from:
+          kind: ImageStreamTag
+          name: nodejs:10
+          namespace: openshift
+      type: Source
+    triggers:
+    - github:
+        secret: VIafOREsozisJzYPsgdT
+      type: GitHub
+    - generic:
+        secret: Zusj5swLsRj0P4_qea1s
+      type: Generic
+    - type: ConfigChange
+    - type: ImageChange

@@ -1,0 +1,1 @@
+only node, custom names for each yaml thing

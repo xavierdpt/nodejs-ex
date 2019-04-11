@@ -1,0 +1,69 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  generateName: nginx-
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicationController
+    name: nginx-1
+spec:
+  containers:
+  - env:
+    image: 172.30.254.23:5000/rox/myapp-is@sha256:9e1fe6abe83c136083ed50cdd631a0ec3297dfa50b85a8cdb0fe0099c3a74606
+    imagePullPolicy: Always
+    name: myapp-container
+    ports:
+    - containerPort: 8080
+      protocol: TCP
+    resources:
+      limits:
+        cpu: "1"
+        memory: 512Mi
+      requests:
+        cpu: 20m
+        memory: 256Mi
+    securityContext:
+      capabilities:
+        drop:
+        - KILL
+        - MKNOD
+        - NET_RAW
+        - SETGID
+        - SETUID
+      runAsUser: 1006210000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: default-token-gdd9h
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  imagePullSecrets:
+  - name: default-dockercfg-ztvxp
+  nodeName: ip-172-31-56-119.us-west-2.compute.internal
+  nodeSelector:
+    type: compute
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1006210000
+    seLinuxOptions:
+      level: s0:c79,c24
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - name: default-token-gdd9h
+    secret:
+      defaultMode: 420
+      secretName: default-token-gdd9h
+status:
+  phase: Pending
+  qosClass: Burstable
