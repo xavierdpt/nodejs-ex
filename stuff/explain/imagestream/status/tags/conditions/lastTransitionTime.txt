@@ -1,0 +1,8 @@
+KIND:     ImageStream
+VERSION:  image.openshift.io/v1
+
+FIELD:    lastTransitionTime <string>
+
+DESCRIPTION:
+     LastTransitionTIme is the time the condition transitioned from one status
+     to another.

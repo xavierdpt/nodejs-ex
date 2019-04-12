@@ -1,0 +1,8 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    portals <[]string>
+
+DESCRIPTION:
+     iSCSI Target Portal List. The portal is either an IP or ip_addr:port if the
+     port is other than default (typically TCP ports 860 and 3260).

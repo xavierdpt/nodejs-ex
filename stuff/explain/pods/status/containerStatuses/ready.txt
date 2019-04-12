@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    ready <boolean>
+
+DESCRIPTION:
+     Specifies whether the container has passed its readiness probe.

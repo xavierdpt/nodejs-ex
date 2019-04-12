@@ -1,0 +1,8 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    name <string>
+
+DESCRIPTION:
+     Volume's name. Must be a DNS_LABEL and unique within the pod. More info:
+     https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names

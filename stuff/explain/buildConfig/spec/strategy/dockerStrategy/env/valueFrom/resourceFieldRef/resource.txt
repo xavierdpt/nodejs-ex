@@ -1,0 +1,7 @@
+KIND:     BuildConfig
+VERSION:  build.openshift.io/v1
+
+FIELD:    resource <string>
+
+DESCRIPTION:
+     Required: resource to select

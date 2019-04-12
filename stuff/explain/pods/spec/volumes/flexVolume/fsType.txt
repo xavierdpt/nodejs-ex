@@ -1,0 +1,9 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    fsType <string>
+
+DESCRIPTION:
+     Filesystem type to mount. Must be a filesystem type supported by the host
+     operating system. Ex. "ext4", "xfs", "ntfs". The default filesystem depends
+     on FlexVolume script.

@@ -1,0 +1,8 @@
+KIND:     ImageStream
+VERSION:  image.openshift.io/v1
+
+FIELD:    reason <string>
+
+DESCRIPTION:
+     Reason is a brief machine readable explanation for the condition's last
+     transition.

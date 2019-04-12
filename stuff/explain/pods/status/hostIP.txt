@@ -1,0 +1,8 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    hostIP <string>
+
+DESCRIPTION:
+     IP address of the host to which the pod is assigned. Empty if not yet
+     scheduled.

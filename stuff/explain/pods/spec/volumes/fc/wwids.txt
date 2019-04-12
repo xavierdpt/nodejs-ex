@@ -1,0 +1,8 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    wwids <[]string>
+
+DESCRIPTION:
+     Optional: FC volume world wide identifiers (wwids) Either wwids or
+     combination of targetWWNs and lun must be set, but not both simultaneously.

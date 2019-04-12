@@ -1,0 +1,8 @@
+KIND:     BuildConfig
+VERSION:  build.openshift.io/v1
+
+FIELD:    dockerfilePath <string>
+
+DESCRIPTION:
+     dockerfilePath is the path of the Dockerfile that will be used to build the
+     Docker image, relative to the root of the context (contextDir).

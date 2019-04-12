@@ -1,0 +1,20 @@
+KIND:     BuildConfig
+VERSION:  build.openshift.io/v1
+
+RESOURCE: fieldRef <Object>
+
+DESCRIPTION:
+     Selects a field of the pod: supports metadata.name, metadata.namespace,
+     metadata.labels, metadata.annotations, spec.nodeName,
+     spec.serviceAccountName, status.hostIP, status.podIP.
+
+     ObjectFieldSelector selects an APIVersioned field of an object.
+
+FIELDS:
+   apiVersion	<string>
+     Version of the schema the FieldPath is written in terms of, defaults to
+     "v1".
+
+   fieldPath	<string> -required-
+     Path of the field to select in the specified API version.
+

@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    key <string>
+
+DESCRIPTION:
+     The key to project.

@@ -1,0 +1,8 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    volume <string>
+
+DESCRIPTION:
+     Volume is a string that references an already created Quobyte volume by
+     name.

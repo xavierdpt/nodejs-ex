@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    containerName <string>
+
+DESCRIPTION:
+     Container name: required for volumes, optional for env vars

@@ -1,0 +1,21 @@
+KIND:     DeploymentConfig
+VERSION:  apps.openshift.io/v1
+
+RESOURCE: triggers <[]Object>
+
+DESCRIPTION:
+     Triggers determine how updates to a DeploymentConfig result in new
+     deployments. If no triggers are defined, a new deployment can only occur as
+     a result of an explicit client update to the DeploymentConfig with a new
+     LatestVersion. If null, defaults to having a config change trigger.
+
+     DeploymentTriggerPolicy describes a policy for a single trigger that
+     results in a new deployment.
+
+FIELDS:
+   imageChangeParams	<Object>
+     ImageChangeParams represents the parameters for the ImageChange trigger.
+
+   type	<string>
+     Type of the trigger
+

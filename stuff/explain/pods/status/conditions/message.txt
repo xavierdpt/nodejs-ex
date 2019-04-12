@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    message <string>
+
+DESCRIPTION:
+     Human-readable message indicating details about last transition.

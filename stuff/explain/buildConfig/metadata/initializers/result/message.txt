@@ -1,0 +1,7 @@
+KIND:     BuildConfig
+VERSION:  build.openshift.io/v1
+
+FIELD:    message <string>
+
+DESCRIPTION:
+     A human-readable description of the status of this operation.

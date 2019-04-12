@@ -1,0 +1,8 @@
+KIND:     ImageStream
+VERSION:  image.openshift.io/v1
+
+FIELD:    generation <integer>
+
+DESCRIPTION:
+     Generation is the spec tag generation that resulted in this tag being
+     updated

@@ -1,0 +1,27 @@
+KIND:     BuildConfig
+VERSION:  build.openshift.io/v1
+
+RESOURCE: git <Object>
+
+DESCRIPTION:
+     git contains optional information about git build source
+
+     GitBuildSource defines the parameters of a Git SCM
+
+FIELDS:
+   httpProxy	<string>
+     httpProxy is a proxy used to reach the git repository over http
+
+   httpsProxy	<string>
+     httpsProxy is a proxy used to reach the git repository over https
+
+   noProxy	<string>
+     noProxy is the list of domains for which the proxy should not be used
+
+   ref	<string>
+     ref is the branch/tag/ref to build.
+
+   uri	<string> -required-
+     uri points to the source that will be built. The structure of the source
+     will depend on the type of build to run
+

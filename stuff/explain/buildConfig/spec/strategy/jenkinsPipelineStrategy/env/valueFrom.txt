@@ -1,0 +1,28 @@
+KIND:     BuildConfig
+VERSION:  build.openshift.io/v1
+
+RESOURCE: valueFrom <Object>
+
+DESCRIPTION:
+     Source for the environment variable's value. Cannot be used if value is not
+     empty.
+
+     EnvVarSource represents a source for the value of an EnvVar.
+
+FIELDS:
+   configMapKeyRef	<Object>
+     Selects a key of a ConfigMap.
+
+   fieldRef	<Object>
+     Selects a field of the pod: supports metadata.name, metadata.namespace,
+     metadata.labels, metadata.annotations, spec.nodeName,
+     spec.serviceAccountName, status.hostIP, status.podIP.
+
+   resourceFieldRef	<Object>
+     Selects a resource of the container: only resources limits and requests
+     (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu,
+     requests.memory and requests.ephemeral-storage) are currently supported.
+
+   secretKeyRef	<Object>
+     Selects a key of a secret in the pod's namespace
+

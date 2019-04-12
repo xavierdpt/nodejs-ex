@@ -1,0 +1,8 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    monitors <[]string>
+
+DESCRIPTION:
+     A collection of Ceph monitors. More info:
+     https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it

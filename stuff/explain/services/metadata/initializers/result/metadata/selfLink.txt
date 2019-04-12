@@ -1,0 +1,8 @@
+KIND:     Service
+VERSION:  v1
+
+FIELD:    selfLink <string>
+
+DESCRIPTION:
+     selfLink is a URL representing this object. Populated by the system.
+     Read-only.

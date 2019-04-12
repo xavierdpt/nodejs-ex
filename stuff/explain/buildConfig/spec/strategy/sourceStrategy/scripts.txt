@@ -1,0 +1,7 @@
+KIND:     BuildConfig
+VERSION:  build.openshift.io/v1
+
+FIELD:    scripts <string>
+
+DESCRIPTION:
+     scripts is the location of Source scripts

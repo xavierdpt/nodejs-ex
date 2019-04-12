@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    options <map[string]string>
+
+DESCRIPTION:
+     Optional: Extra command options if any.

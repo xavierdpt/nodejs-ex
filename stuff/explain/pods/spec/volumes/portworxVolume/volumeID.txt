@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    volumeID <string>
+
+DESCRIPTION:
+     VolumeID uniquely identifies a Portworx volume

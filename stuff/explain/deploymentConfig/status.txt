@@ -1,0 +1,46 @@
+KIND:     DeploymentConfig
+VERSION:  apps.openshift.io/v1
+
+RESOURCE: status <Object>
+
+DESCRIPTION:
+     Status represents the current deployment state.
+
+     DeploymentConfigStatus represents the current deployment state.
+
+FIELDS:
+   availableReplicas	<integer> -required-
+     AvailableReplicas is the total number of available pods targeted by this
+     deployment config.
+
+   conditions	<[]Object>
+     Conditions represents the latest available observations of a deployment
+     config's current state.
+
+   details	<Object>
+     Details are the reasons for the update to this deployment config. This
+     could be based on a change made by the user or caused by an automatic
+     trigger
+
+   latestVersion	<integer> -required-
+     LatestVersion is used to determine whether the current deployment
+     associated with a deployment config is out of sync.
+
+   observedGeneration	<integer> -required-
+     ObservedGeneration is the most recent generation observed by the deployment
+     config controller.
+
+   readyReplicas	<integer>
+     Total number of ready pods targeted by this deployment.
+
+   replicas	<integer> -required-
+     Replicas is the total number of pods targeted by this deployment config.
+
+   unavailableReplicas	<integer> -required-
+     UnavailableReplicas is the total number of unavailable pods targeted by
+     this deployment config.
+
+   updatedReplicas	<integer> -required-
+     UpdatedReplicas is the total number of non-terminated pods targeted by this
+     deployment config that have the desired template spec.
+

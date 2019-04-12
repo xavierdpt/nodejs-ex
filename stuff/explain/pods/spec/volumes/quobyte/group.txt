@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    group <string>
+
+DESCRIPTION:
+     Group to map volume access to Default is no group

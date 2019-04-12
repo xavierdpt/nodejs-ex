@@ -1,0 +1,8 @@
+KIND:     Service
+VERSION:  v1
+
+FIELD:    name <string>
+
+DESCRIPTION:
+     Name of the referent. More info:
+     http://kubernetes.io/docs/user-guide/identifiers#names

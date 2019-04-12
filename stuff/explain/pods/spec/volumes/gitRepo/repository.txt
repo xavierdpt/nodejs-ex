@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    repository <string>
+
+DESCRIPTION:
+     Repository URL

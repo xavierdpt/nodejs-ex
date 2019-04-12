@@ -1,0 +1,14 @@
+KIND:     BuildConfig
+VERSION:  build.openshift.io/v1
+
+RESOURCE: status <Object>
+
+DESCRIPTION:
+     status holds any relevant information about a build config
+
+     BuildConfigStatus contains current state of the build config object.
+
+FIELDS:
+   lastVersion	<integer> -required-
+     lastVersion is used to inform about number of last triggered build.
+

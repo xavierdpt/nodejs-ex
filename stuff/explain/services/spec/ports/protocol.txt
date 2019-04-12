@@ -1,0 +1,7 @@
+KIND:     Service
+VERSION:  v1
+
+FIELD:    protocol <string>
+
+DESCRIPTION:
+     The IP protocol for this port. Supports "TCP" and "UDP". Default is TCP.

@@ -1,0 +1,25 @@
+KIND:     BuildConfig
+VERSION:  build.openshift.io/v1
+
+RESOURCE: imageChange <Object>
+
+DESCRIPTION:
+     imageChange contains parameters for an ImageChange type of trigger
+
+     ImageChangeTrigger allows builds to be triggered when an ImageStream
+     changes
+
+FIELDS:
+   from	<Object>
+     from is a reference to an ImageStreamTag that will trigger a build when
+     updated It is optional. If no From is specified, the From image from the
+     build strategy will be used. Only one ImageChangeTrigger with an empty From
+     reference is allowed in a build configuration.
+
+   lastTriggeredImageID	<string>
+     lastTriggeredImageID is used internally by the ImageChangeController to
+     save last used image ID for build
+
+   paused	<boolean>
+     paused is true if this trigger is temporarily disabled. Optional.
+

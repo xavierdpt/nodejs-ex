@@ -1,0 +1,8 @@
+KIND:     Service
+VERSION:  v1
+
+FIELD:    hostname <string>
+
+DESCRIPTION:
+     Hostname is set for load-balancer ingress points that are DNS based
+     (typically AWS load-balancers)

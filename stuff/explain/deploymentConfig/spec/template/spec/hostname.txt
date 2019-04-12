@@ -1,0 +1,8 @@
+KIND:     DeploymentConfig
+VERSION:  apps.openshift.io/v1
+
+FIELD:    hostname <string>
+
+DESCRIPTION:
+     Specifies the hostname of the Pod If not specified, the pod's hostname will
+     be set to a system-defined value.

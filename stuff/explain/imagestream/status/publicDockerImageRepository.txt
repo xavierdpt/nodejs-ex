@@ -1,0 +1,9 @@
+KIND:     ImageStream
+VERSION:  image.openshift.io/v1
+
+FIELD:    publicDockerImageRepository <string>
+
+DESCRIPTION:
+     PublicDockerImageRepository represents the public location from where the
+     image can be pulled outside the cluster. This field may be empty if the
+     administrator has not exposed the integrated registry externally.

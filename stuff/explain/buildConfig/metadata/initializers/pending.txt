@@ -1,0 +1,17 @@
+KIND:     BuildConfig
+VERSION:  build.openshift.io/v1
+
+RESOURCE: pending <[]Object>
+
+DESCRIPTION:
+     Pending is a list of initializers that must execute in order before this
+     object is visible. When the last pending initializer is removed, and no
+     failing result is set, the initializers struct will be set to nil and the
+     object is considered as initialized and visible to all clients.
+
+     Initializer is information about an initializer that has not yet completed.
+
+FIELDS:
+   name	<string> -required-
+     name of the process that is responsible for initializing this object.
+

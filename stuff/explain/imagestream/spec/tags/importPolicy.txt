@@ -1,0 +1,20 @@
+KIND:     ImageStream
+VERSION:  image.openshift.io/v1
+
+RESOURCE: importPolicy <Object>
+
+DESCRIPTION:
+     ImportPolicy is information that controls how images may be imported by the
+     server.
+
+     TagImportPolicy controls how images related to this tag will be imported.
+
+FIELDS:
+   insecure	<boolean>
+     Insecure is true if the server may bypass certificate verification or
+     connect directly over HTTP during image import.
+
+   scheduled	<boolean>
+     Scheduled indicates to the server that this tag should be periodically
+     checked to ensure it is up to date, and imported
+

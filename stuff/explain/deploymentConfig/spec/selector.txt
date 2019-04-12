@@ -1,0 +1,7 @@
+KIND:     DeploymentConfig
+VERSION:  apps.openshift.io/v1
+
+FIELD:    selector <map[string]string>
+
+DESCRIPTION:
+     Selector is a label query over pods that should match the Replicas count.

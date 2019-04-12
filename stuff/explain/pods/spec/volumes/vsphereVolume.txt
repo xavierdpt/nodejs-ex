@@ -1,0 +1,27 @@
+KIND:     Pod
+VERSION:  v1
+
+RESOURCE: vsphereVolume <Object>
+
+DESCRIPTION:
+     VsphereVolume represents a vSphere volume attached and mounted on kubelets
+     host machine
+
+     Represents a vSphere volume resource.
+
+FIELDS:
+   fsType	<string>
+     Filesystem type to mount. Must be a filesystem type supported by the host
+     operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be
+     "ext4" if unspecified.
+
+   storagePolicyID	<string>
+     Storage Policy Based Management (SPBM) profile ID associated with the
+     StoragePolicyName.
+
+   storagePolicyName	<string>
+     Storage Policy Based Management (SPBM) profile name.
+
+   volumePath	<string> -required-
+     Path that identifies vSphere volume vmdk
+

@@ -1,0 +1,7 @@
+KIND:     ImageStream
+VERSION:  image.openshift.io/v1
+
+FIELD:    created <string>
+
+DESCRIPTION:
+     Created holds the time the TagEvent was created

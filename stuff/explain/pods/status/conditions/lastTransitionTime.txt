@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    lastTransitionTime <string>
+
+DESCRIPTION:
+     Last time the condition transitioned from one status to another.

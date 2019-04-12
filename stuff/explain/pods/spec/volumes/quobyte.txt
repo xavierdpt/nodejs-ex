@@ -1,0 +1,31 @@
+KIND:     Pod
+VERSION:  v1
+
+RESOURCE: quobyte <Object>
+
+DESCRIPTION:
+     Quobyte represents a Quobyte mount on the host that shares a pod's lifetime
+
+     Represents a Quobyte mount that lasts the lifetime of a pod. Quobyte
+     volumes do not support ownership management or SELinux relabeling.
+
+FIELDS:
+   group	<string>
+     Group to map volume access to Default is no group
+
+   readOnly	<boolean>
+     ReadOnly here will force the Quobyte volume to be mounted with read-only
+     permissions. Defaults to false.
+
+   registry	<string> -required-
+     Registry represents a single or multiple Quobyte Registry services
+     specified as a string as host:port pair (multiple entries are separated
+     with commas) which acts as the central registry for volumes
+
+   user	<string>
+     User to map volume access to Defaults to serivceaccount user
+
+   volume	<string> -required-
+     Volume is a string that references an already created Quobyte volume by
+     name.
+

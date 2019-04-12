@@ -1,0 +1,16 @@
+KIND:     Pod
+VERSION:  v1
+
+RESOURCE: downwardAPI <Object>
+
+DESCRIPTION:
+     information about the downwardAPI data to project
+
+     Represents downward API info for projecting into a projected volume. Note
+     that this is identical to a downwardAPI volume source without the default
+     mode.
+
+FIELDS:
+   items	<[]Object>
+     Items is a list of DownwardAPIVolume file
+

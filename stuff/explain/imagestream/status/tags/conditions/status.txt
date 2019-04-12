@@ -1,0 +1,7 @@
+KIND:     ImageStream
+VERSION:  image.openshift.io/v1
+
+FIELD:    status <string>
+
+DESCRIPTION:
+     Status of the condition, one of True, False, Unknown.

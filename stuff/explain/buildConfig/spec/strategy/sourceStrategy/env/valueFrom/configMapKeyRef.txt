@@ -1,0 +1,21 @@
+KIND:     BuildConfig
+VERSION:  build.openshift.io/v1
+
+RESOURCE: configMapKeyRef <Object>
+
+DESCRIPTION:
+     Selects a key of a ConfigMap.
+
+     Selects a key from a ConfigMap.
+
+FIELDS:
+   key	<string> -required-
+     The key to select.
+
+   name	<string>
+     Name of the referent. More info:
+     https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+
+   optional	<boolean>
+     Specify whether the ConfigMap or it's key must be defined
+

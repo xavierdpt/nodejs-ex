@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    chapAuthSession <boolean>
+
+DESCRIPTION:
+     whether support iSCSI Session CHAP authentication

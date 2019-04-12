@@ -1,0 +1,23 @@
+KIND:     BuildConfig
+VERSION:  build.openshift.io/v1
+
+RESOURCE: resourceFieldRef <Object>
+
+DESCRIPTION:
+     Selects a resource of the container: only resources limits and requests
+     (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu,
+     requests.memory and requests.ephemeral-storage) are currently supported.
+
+     ResourceFieldSelector represents container resources (cpu, memory) and
+     their output format
+
+FIELDS:
+   containerName	<string>
+     Container name: required for volumes, optional for env vars
+
+   divisor	<string>
+     Specifies the output format of the exposed resources, defaults to "1"
+
+   resource	<string> -required-
+     Required: resource to select
+

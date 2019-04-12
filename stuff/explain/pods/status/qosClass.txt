@@ -1,0 +1,10 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    qosClass <string>
+
+DESCRIPTION:
+     The Quality of Service (QOS) classification assigned to the pod based on
+     resource requirements See PodQOSClass type for available QOS classes More
+     info:
+     https://git.k8s.io/community/contributors/design-proposals/node/resource-qos.md

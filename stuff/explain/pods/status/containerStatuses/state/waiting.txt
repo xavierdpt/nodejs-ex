@@ -1,0 +1,17 @@
+KIND:     Pod
+VERSION:  v1
+
+RESOURCE: waiting <Object>
+
+DESCRIPTION:
+     Details about a waiting container
+
+     ContainerStateWaiting is a waiting state of a container.
+
+FIELDS:
+   message	<string>
+     Message regarding why the container is not yet running.
+
+   reason	<string>
+     (brief) reason the container is not yet running.
+

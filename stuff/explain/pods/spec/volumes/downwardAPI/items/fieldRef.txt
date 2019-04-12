@@ -1,0 +1,19 @@
+KIND:     Pod
+VERSION:  v1
+
+RESOURCE: fieldRef <Object>
+
+DESCRIPTION:
+     Required: Selects a field of the pod: only annotations, labels, name and
+     namespace are supported.
+
+     ObjectFieldSelector selects an APIVersioned field of an object.
+
+FIELDS:
+   apiVersion	<string>
+     Version of the schema the FieldPath is written in terms of, defaults to
+     "v1".
+
+   fieldPath	<string> -required-
+     Path of the field to select in the specified API version.
+

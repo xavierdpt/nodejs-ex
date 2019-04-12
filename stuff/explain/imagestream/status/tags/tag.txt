@@ -1,0 +1,7 @@
+KIND:     ImageStream
+VERSION:  image.openshift.io/v1
+
+FIELD:    tag <string>
+
+DESCRIPTION:
+     Tag is the tag for which the history is recorded

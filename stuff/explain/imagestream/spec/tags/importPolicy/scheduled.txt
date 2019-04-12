@@ -1,0 +1,8 @@
+KIND:     ImageStream
+VERSION:  image.openshift.io/v1
+
+FIELD:    scheduled <boolean>
+
+DESCRIPTION:
+     Scheduled indicates to the server that this tag should be periodically
+     checked to ensure it is up to date, and imported

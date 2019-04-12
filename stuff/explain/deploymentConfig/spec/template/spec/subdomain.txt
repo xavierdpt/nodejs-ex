@@ -1,0 +1,9 @@
+KIND:     DeploymentConfig
+VERSION:  apps.openshift.io/v1
+
+FIELD:    subdomain <string>
+
+DESCRIPTION:
+     If specified, the fully qualified Pod hostname will be
+     "<hostname>.<subdomain>.<pod namespace>.svc.<cluster domain>". If not
+     specified, the pod will not have a domainname at all.

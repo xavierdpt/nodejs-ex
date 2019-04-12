@@ -1,0 +1,9 @@
+KIND:     BuildConfig
+VERSION:  build.openshift.io/v1
+
+FIELD:    forcePull <boolean>
+
+DESCRIPTION:
+     forcePull describes if the controller should configure the build pod to
+     always pull the images for the builder or only pull if it is not present
+     locally

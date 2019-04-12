@@ -1,0 +1,21 @@
+KIND:     ImageStream
+VERSION:  image.openshift.io/v1
+
+RESOURCE: tags <[]Object>
+
+DESCRIPTION:
+     Tags are a historical record of images associated with each tag. The first
+     entry in the TagEvent array is the currently tagged image.
+
+     NamedTagEventList relates a tag to its image history.
+
+FIELDS:
+   conditions	<[]Object>
+     Conditions is an array of conditions that apply to the tag event list.
+
+   items	<[]Object> -required-
+     Standard object's metadata.
+
+   tag	<string> -required-
+     Tag is the tag for which the history is recorded
+

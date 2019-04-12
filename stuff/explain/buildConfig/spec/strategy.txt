@@ -1,0 +1,27 @@
+KIND:     BuildConfig
+VERSION:  build.openshift.io/v1
+
+RESOURCE: strategy <Object>
+
+DESCRIPTION:
+     strategy defines how to perform a build.
+
+     BuildStrategy contains the details of how to perform a build.
+
+FIELDS:
+   customStrategy	<Object>
+     customStrategy holds the parameters to the Custom build strategy
+
+   dockerStrategy	<Object>
+     dockerStrategy holds the parameters to the Docker build strategy.
+
+   jenkinsPipelineStrategy	<Object>
+     JenkinsPipelineStrategy holds the parameters to the Jenkins Pipeline build
+     strategy.
+
+   sourceStrategy	<Object>
+     sourceStrategy holds the parameters to the Source build strategy.
+
+   type	<string> -required-
+     type is the kind of build strategy.
+

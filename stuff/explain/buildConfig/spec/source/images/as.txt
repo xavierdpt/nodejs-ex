@@ -1,0 +1,12 @@
+KIND:     BuildConfig
+VERSION:  build.openshift.io/v1
+
+FIELD:    as <[]string>
+
+DESCRIPTION:
+     A list of image names that this source will be used in place of during a
+     multi-stage Docker image build. For instance, a Dockerfile that uses "COPY
+     --from=nginx:latest" will first check for an image source that has
+     "nginx:latest" in this field before attempting to pull directly. If the
+     Dockerfile does not reference an image source it is ignored. This field and
+     paths may both be set, in which case the contents will be used twice.

@@ -1,0 +1,8 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    type <string>
+
+DESCRIPTION:
+     Type is the type of the condition. More info:
+     https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions

@@ -1,0 +1,7 @@
+KIND:     Service
+VERSION:  v1
+
+FIELD:    code <integer>
+
+DESCRIPTION:
+     Suggested HTTP return code for this status, 0 if not set.

@@ -1,0 +1,14 @@
+KIND:     Service
+VERSION:  v1
+
+RESOURCE: sessionAffinityConfig <Object>
+
+DESCRIPTION:
+     sessionAffinityConfig contains the configurations of session affinity.
+
+     SessionAffinityConfig represents the configurations of session affinity.
+
+FIELDS:
+   clientIP	<Object>
+     clientIP contains the configurations of Client IP based session affinity.
+

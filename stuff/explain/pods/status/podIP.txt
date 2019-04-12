@@ -1,0 +1,8 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    podIP <string>
+
+DESCRIPTION:
+     IP address allocated to the pod. Routable at least within the cluster.
+     Empty if not yet allocated.

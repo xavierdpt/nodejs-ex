@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    storagePool <string>
+
+DESCRIPTION:
+     The ScaleIO Storage Pool associated with the protection domain.

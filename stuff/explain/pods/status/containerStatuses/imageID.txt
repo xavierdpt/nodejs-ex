@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    imageID <string>
+
+DESCRIPTION:
+     ImageID of the container's image.

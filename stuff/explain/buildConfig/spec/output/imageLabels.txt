@@ -1,0 +1,19 @@
+KIND:     BuildConfig
+VERSION:  build.openshift.io/v1
+
+RESOURCE: imageLabels <[]Object>
+
+DESCRIPTION:
+     imageLabels define a list of labels that are applied to the resulting
+     image. If there are multiple labels with the same name then the last one in
+     the list is used.
+
+     ImageLabel represents a label applied to the resulting image.
+
+FIELDS:
+   name	<string> -required-
+     name defines the name of the label. It must have non-zero length.
+
+   value	<string>
+     value defines the literal value of the label.
+

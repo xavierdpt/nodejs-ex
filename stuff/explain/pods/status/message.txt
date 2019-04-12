@@ -1,0 +1,8 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    message <string>
+
+DESCRIPTION:
+     A human readable message indicating details about why the pod is in this
+     condition.

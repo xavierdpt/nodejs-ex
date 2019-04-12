@@ -1,0 +1,34 @@
+KIND:     BuildConfig
+VERSION:  build.openshift.io/v1
+
+RESOURCE: sourceStrategy <Object>
+
+DESCRIPTION:
+     sourceStrategy holds the parameters to the Source build strategy.
+
+     SourceBuildStrategy defines input parameters specific to an Source build.
+
+FIELDS:
+   env	<[]Object>
+     env contains additional environment variables you want to pass into a
+     builder container.
+
+   forcePull	<boolean>
+     forcePull describes if the builder should pull the images from registry
+     prior to building.
+
+   from	<Object> -required-
+     from is reference to an DockerImage, ImageStreamTag, or ImageStreamImage
+     from which the docker image should be pulled
+
+   incremental	<boolean>
+     incremental flag forces the Source build to do incremental builds if true.
+
+   pullSecret	<Object>
+     pullSecret is the name of a Secret that would be used for setting up the
+     authentication for pulling the Docker images from the private Docker
+     registries
+
+   scripts	<string>
+     scripts is the location of Source scripts
+

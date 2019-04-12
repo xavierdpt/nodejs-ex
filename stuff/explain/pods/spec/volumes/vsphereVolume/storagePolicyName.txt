@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    storagePolicyName <string>
+
+DESCRIPTION:
+     Storage Policy Based Management (SPBM) profile name.

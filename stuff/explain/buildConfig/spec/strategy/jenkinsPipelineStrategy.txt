@@ -1,0 +1,27 @@
+KIND:     BuildConfig
+VERSION:  build.openshift.io/v1
+
+RESOURCE: jenkinsPipelineStrategy <Object>
+
+DESCRIPTION:
+     JenkinsPipelineStrategy holds the parameters to the Jenkins Pipeline build
+     strategy.
+
+     JenkinsPipelineBuildStrategy holds parameters specific to a Jenkins
+     Pipeline build.
+
+FIELDS:
+   env	<[]Object>
+     env contains additional environment variables you want to pass into a build
+     pipeline.
+
+   jenkinsfile	<string>
+     Jenkinsfile defines the optional raw contents of a Jenkinsfile which
+     defines a Jenkins pipeline build.
+
+   jenkinsfilePath	<string>
+     JenkinsfilePath is the optional path of the Jenkinsfile that will be used
+     to configure the pipeline relative to the root of the context (contextDir).
+     If both JenkinsfilePath & Jenkinsfile are both not specified, this defaults
+     to Jenkinsfile in the root of the specified contextDir.
+

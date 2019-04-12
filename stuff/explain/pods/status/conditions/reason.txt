@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    reason <string>
+
+DESCRIPTION:
+     Unique, one-word, CamelCase reason for the condition's last transition.

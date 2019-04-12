@@ -1,0 +1,8 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    apiVersion <string>
+
+DESCRIPTION:
+     Version of the schema the FieldPath is written in terms of, defaults to
+     "v1".

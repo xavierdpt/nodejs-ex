@@ -1,0 +1,8 @@
+KIND:     ImageStream
+VERSION:  image.openshift.io/v1
+
+FIELD:    insecure <boolean>
+
+DESCRIPTION:
+     Insecure is true if the server may bypass certificate verification or
+     connect directly over HTTP during image import.

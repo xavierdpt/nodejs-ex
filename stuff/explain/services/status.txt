@@ -1,0 +1,17 @@
+KIND:     Service
+VERSION:  v1
+
+RESOURCE: status <Object>
+
+DESCRIPTION:
+     Most recently observed status of the service. Populated by the system.
+     Read-only. More info:
+     https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status
+
+     ServiceStatus represents the current status of a service.
+
+FIELDS:
+   loadBalancer	<Object>
+     LoadBalancer contains the current status of the load-balancer, if one is
+     present.
+

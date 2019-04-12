@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    optional <boolean>
+
+DESCRIPTION:
+     Specify whether the ConfigMap or it's keys must be defined

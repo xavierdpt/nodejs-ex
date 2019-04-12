@@ -1,0 +1,9 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    status <string>
+
+DESCRIPTION:
+     Status is the status of the condition. Can be True, False, Unknown. More
+     info:
+     https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions

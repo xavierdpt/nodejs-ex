@@ -1,0 +1,8 @@
+KIND:     ImageStream
+VERSION:  image.openshift.io/v1
+
+FIELD:    reference <boolean>
+
+DESCRIPTION:
+     Reference states if the tag will be imported. Default value is false, which
+     means the tag will be imported.

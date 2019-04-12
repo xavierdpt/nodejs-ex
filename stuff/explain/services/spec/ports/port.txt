@@ -1,0 +1,7 @@
+KIND:     Service
+VERSION:  v1
+
+FIELD:    port <integer>
+
+DESCRIPTION:
+     The port that will be exposed by this service.

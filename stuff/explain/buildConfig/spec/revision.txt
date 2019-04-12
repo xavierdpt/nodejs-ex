@@ -1,0 +1,20 @@
+KIND:     BuildConfig
+VERSION:  build.openshift.io/v1
+
+RESOURCE: revision <Object>
+
+DESCRIPTION:
+     revision is the information from the source for a specific repo snapshot.
+     This is optional.
+
+     SourceRevision is the revision or commit information from the source for
+     the build
+
+FIELDS:
+   git	<Object>
+     Git contains information about git-based build source
+
+   type	<string> -required-
+     type of the build source, may be one of 'Source', 'Dockerfile', 'Binary',
+     or 'Images'
+

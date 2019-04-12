@@ -1,0 +1,18 @@
+KIND:     DeploymentConfig
+VERSION:  apps.openshift.io/v1
+
+RESOURCE: readinessGates <[]Object>
+
+DESCRIPTION:
+     If specified, all readiness gates will be evaluated for pod readiness. A
+     pod is ready when all its containers are ready AND all conditions specified
+     in the readiness gates have status equal to "True" More info:
+     https://github.com/kubernetes/community/blob/master/keps/sig-network/0007-pod-ready%!B(MISSING)%!B(MISSING).md
+
+     PodReadinessGate contains the reference to a pod condition
+
+FIELDS:
+   conditionType	<string> -required-
+     ConditionType refers to a condition in the pod's condition list with
+     matching type.
+

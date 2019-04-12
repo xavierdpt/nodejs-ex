@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    protectionDomain <string>
+
+DESCRIPTION:
+     The name of the ScaleIO Protection Domain for the configured storage.

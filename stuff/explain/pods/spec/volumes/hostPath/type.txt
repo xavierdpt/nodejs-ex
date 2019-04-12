@@ -1,0 +1,8 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    type <string>
+
+DESCRIPTION:
+     Type for HostPath Volume Defaults to "" More info:
+     https://kubernetes.io/docs/concepts/storage/volumes#hostpath

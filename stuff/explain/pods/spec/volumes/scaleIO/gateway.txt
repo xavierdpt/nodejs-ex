@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    gateway <string>
+
+DESCRIPTION:
+     The host address of the ScaleIO API Gateway.

@@ -1,0 +1,10 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    directory <string>
+
+DESCRIPTION:
+     Target directory name. Must not contain or start with '..'. If '.' is
+     supplied, the volume directory will be the git repository. Otherwise, if
+     specified, the volume will contain the git repository in the subdirectory
+     with the given name.

@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    reason <string>
+
+DESCRIPTION:
+     (brief) reason the container is not yet running.

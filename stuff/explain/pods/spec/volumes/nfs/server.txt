@@ -1,0 +1,8 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    server <string>
+
+DESCRIPTION:
+     Server is the hostname or IP address of the NFS server. More info:
+     https://kubernetes.io/docs/concepts/storage/volumes#nfs

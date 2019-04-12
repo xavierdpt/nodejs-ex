@@ -1,0 +1,17 @@
+KIND:     BuildConfig
+VERSION:  build.openshift.io/v1
+
+RESOURCE: author <Object>
+
+DESCRIPTION:
+     author is the author of a specific commit
+
+     SourceControlUser defines the identity of a user of source control
+
+FIELDS:
+   email	<string>
+     email of the source control user
+
+   name	<string>
+     name of the source control user
+

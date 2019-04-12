@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    chapAuthDiscovery <boolean>
+
+DESCRIPTION:
+     whether support iSCSI Discovery CHAP authentication

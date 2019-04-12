@@ -1,0 +1,14 @@
+KIND:     Pod
+VERSION:  v1
+
+RESOURCE: running <Object>
+
+DESCRIPTION:
+     Details about a running container
+
+     ContainerStateRunning is a running state of a container.
+
+FIELDS:
+   startedAt	<string>
+     Time at which the container was last (re-)started
+

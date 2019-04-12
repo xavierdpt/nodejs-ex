@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    system <string>
+
+DESCRIPTION:
+     The name of the storage system as configured in ScaleIO.

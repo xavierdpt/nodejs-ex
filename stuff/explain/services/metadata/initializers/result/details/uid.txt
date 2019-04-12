@@ -1,0 +1,9 @@
+KIND:     Service
+VERSION:  v1
+
+FIELD:    uid <string>
+
+DESCRIPTION:
+     UID of the resource. (when there is a single resource which can be
+     described). More info:
+     http://kubernetes.io/docs/user-guide/identifiers#uids

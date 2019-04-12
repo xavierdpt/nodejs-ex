@@ -1,0 +1,9 @@
+KIND:     ImageStream
+VERSION:  image.openshift.io/v1
+
+FIELD:    dockerImageRepository <string>
+
+DESCRIPTION:
+     DockerImageRepository represents the effective location this stream may be
+     accessed at. May be empty until the server determines where the repository
+     is located

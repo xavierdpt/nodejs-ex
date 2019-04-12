@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    readOnly <boolean>
+
+DESCRIPTION:
+     Will force the ReadOnly setting in VolumeMounts. Default false.

@@ -1,0 +1,8 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    volumeName <string>
+
+DESCRIPTION:
+     The name of a volume already created in the ScaleIO system that is
+     associated with this volume source.

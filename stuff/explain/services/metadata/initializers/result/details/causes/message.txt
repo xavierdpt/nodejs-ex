@@ -1,0 +1,8 @@
+KIND:     Service
+VERSION:  v1
+
+FIELD:    message <string>
+
+DESCRIPTION:
+     A human-readable description of the cause of the error. This field may be
+     presented as-is to a reader.

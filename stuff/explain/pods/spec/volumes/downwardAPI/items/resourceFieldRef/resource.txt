@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    resource <string>
+
+DESCRIPTION:
+     Required: resource to select

@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    containerID <string>
+
+DESCRIPTION:
+     Container's ID in the format 'docker://<container_id>'.

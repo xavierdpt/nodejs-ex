@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    divisor <string>
+
+DESCRIPTION:
+     Specifies the output format of the exposed resources, defaults to "1"

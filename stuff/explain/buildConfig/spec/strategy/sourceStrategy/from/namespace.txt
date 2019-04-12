@@ -1,0 +1,8 @@
+KIND:     BuildConfig
+VERSION:  build.openshift.io/v1
+
+FIELD:    namespace <string>
+
+DESCRIPTION:
+     Namespace of the referent. More info:
+     https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/

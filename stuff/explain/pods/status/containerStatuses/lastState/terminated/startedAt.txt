@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    startedAt <string>
+
+DESCRIPTION:
+     Time at which previous execution of the container started

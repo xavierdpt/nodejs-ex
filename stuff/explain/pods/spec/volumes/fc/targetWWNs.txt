@@ -1,0 +1,7 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    targetWWNs <[]string>
+
+DESCRIPTION:
+     Optional: FC target worldwide names (WWNs)

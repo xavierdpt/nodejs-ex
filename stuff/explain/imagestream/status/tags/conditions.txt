@@ -1,0 +1,32 @@
+KIND:     ImageStream
+VERSION:  image.openshift.io/v1
+
+RESOURCE: conditions <[]Object>
+
+DESCRIPTION:
+     Conditions is an array of conditions that apply to the tag event list.
+
+     TagEventCondition contains condition information for a tag event.
+
+FIELDS:
+   generation	<integer> -required-
+     Generation is the spec tag generation that this status corresponds to
+
+   lastTransitionTime	<string>
+     LastTransitionTIme is the time the condition transitioned from one status
+     to another.
+
+   message	<string>
+     Message is a human readable description of the details about last
+     transition, complementing reason.
+
+   reason	<string>
+     Reason is a brief machine readable explanation for the condition's last
+     transition.
+
+   status	<string> -required-
+     Status of the condition, one of True, False, Unknown.
+
+   type	<string> -required-
+     Type of tag event condition, currently only ImportSuccess
+

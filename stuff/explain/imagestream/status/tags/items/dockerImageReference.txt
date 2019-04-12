@@ -1,0 +1,7 @@
+KIND:     ImageStream
+VERSION:  image.openshift.io/v1
+
+FIELD:    dockerImageReference <string>
+
+DESCRIPTION:
+     DockerImageReference is the string that can be used to pull this image

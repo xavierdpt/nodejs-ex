@@ -1,0 +1,25 @@
+KIND:     ImageStream
+VERSION:  image.openshift.io/v1
+
+RESOURCE: items <[]Object>
+
+DESCRIPTION:
+     Standard object's metadata.
+
+     TagEvent is used by ImageStreamStatus to keep a historical record of images
+     associated with a tag.
+
+FIELDS:
+   created	<string> -required-
+     Created holds the time the TagEvent was created
+
+   dockerImageReference	<string> -required-
+     DockerImageReference is the string that can be used to pull this image
+
+   generation	<integer> -required-
+     Generation is the spec tag generation that resulted in this tag being
+     updated
+
+   image	<string> -required-
+     Image is the image
+

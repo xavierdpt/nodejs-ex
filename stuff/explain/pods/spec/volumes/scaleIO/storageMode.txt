@@ -1,0 +1,8 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    storageMode <string>
+
+DESCRIPTION:
+     Indicates whether the storage for a volume should be ThickProvisioned or
+     ThinProvisioned.

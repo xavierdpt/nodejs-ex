@@ -1,0 +1,8 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    path <string>
+
+DESCRIPTION:
+     Path is the path relative to the mount point of the file to project the
+     token into.

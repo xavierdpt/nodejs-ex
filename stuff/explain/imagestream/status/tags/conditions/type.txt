@@ -1,0 +1,7 @@
+KIND:     ImageStream
+VERSION:  image.openshift.io/v1
+
+FIELD:    type <string>
+
+DESCRIPTION:
+     Type of tag event condition, currently only ImportSuccess

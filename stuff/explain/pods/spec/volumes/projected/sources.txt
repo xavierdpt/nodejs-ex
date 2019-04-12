@@ -1,0 +1,23 @@
+KIND:     Pod
+VERSION:  v1
+
+RESOURCE: sources <[]Object>
+
+DESCRIPTION:
+     list of volume projections
+
+     Projection that may be projected along with other supported volume types
+
+FIELDS:
+   configMap	<Object>
+     information about the configMap data to project
+
+   downwardAPI	<Object>
+     information about the downwardAPI data to project
+
+   secret	<Object>
+     information about the secret data to project
+
+   serviceAccountToken	<Object>
+     information about the serviceAccountToken data to project
+

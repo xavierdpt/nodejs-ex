@@ -1,0 +1,8 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    image <string>
+
+DESCRIPTION:
+     The image the container is running. More info:
+     https://kubernetes.io/docs/concepts/containers/images

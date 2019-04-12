@@ -1,0 +1,8 @@
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    reason <string>
+
+DESCRIPTION:
+     A brief CamelCase message indicating details about why the pod is in this
+     state. e.g. 'Evicted'
