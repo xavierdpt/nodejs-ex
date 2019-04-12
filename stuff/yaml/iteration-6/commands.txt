@@ -1,0 +1,1 @@
+oc new-app https://github.com/xavierdpt/nodejs-ex --name spring-boot-example --context-dir=java --image-stream="openshift/java:8"
