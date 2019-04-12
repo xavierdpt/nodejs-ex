@@ -1,0 +1,17 @@
+KIND:     PersistentVolume
+VERSION:  v1
+
+RESOURCE: nodeAffinity <Object>
+
+DESCRIPTION:
+     NodeAffinity defines constraints that limit what nodes this volume can be
+     accessed from. This field influences the scheduling of pods that use this
+     volume.
+
+     VolumeNodeAffinity defines constraints that limit what nodes this volume
+     can be accessed from.
+
+FIELDS:
+   required	<Object>
+     Required specifies hard node constraints that must be met.
+

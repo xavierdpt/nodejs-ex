@@ -1,0 +1,9 @@
+KIND:     Route
+VERSION:  route.openshift.io/v1
+
+FIELD:    host <string>
+
+DESCRIPTION:
+     host is an alias/DNS that points to the service. Optional. If not specified
+     a route name will typically be automatically chosen. Must follow DNS952
+     subdomain conventions.

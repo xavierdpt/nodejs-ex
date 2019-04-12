@@ -1,0 +1,29 @@
+KIND:     Route
+VERSION:  route.openshift.io/v1
+
+RESOURCE: to <Object>
+
+DESCRIPTION:
+     to is an object the route should use as the primary backend. Only the
+     Service kind is allowed, and it will be defaulted to Service. If the weight
+     field (0-256 default 1) is set to zero, no traffic will be sent to this
+     backend.
+
+     RouteTargetReference specifies the target that resolve into endpoints. Only
+     the 'Service' kind is allowed. Use 'weight' field to emphasize one over
+     others.
+
+FIELDS:
+   kind	<string> -required-
+     The kind of target that the route is referring to. Currently, only
+     'Service' is allowed
+
+   name	<string> -required-
+     name of the service/target that is being referred to. e.g. name of the
+     service
+
+   weight	<integer> -required-
+     weight as an integer between 0 and 256, default 1, that specifies the
+     target's relative weight against other target reference objects. 0
+     suppresses requests to this backend.
+

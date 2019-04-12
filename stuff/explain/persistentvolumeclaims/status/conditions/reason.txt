@@ -1,0 +1,9 @@
+KIND:     PersistentVolumeClaim
+VERSION:  v1
+
+FIELD:    reason <string>
+
+DESCRIPTION:
+     Unique, this should be a short, machine understandable string that gives
+     the reason for condition's last transition. If it reports "ResizeStarted"
+     that means the underlying persistent volume is being resized.

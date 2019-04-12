@@ -1,0 +1,48 @@
+KIND:     PersistentVolume
+VERSION:  v1
+
+RESOURCE: scaleIO <Object>
+
+DESCRIPTION:
+     ScaleIO represents a ScaleIO persistent volume attached and mounted on
+     Kubernetes nodes.
+
+     ScaleIOPersistentVolumeSource represents a persistent ScaleIO volume
+
+FIELDS:
+   fsType	<string>
+     Filesystem type to mount. Must be a filesystem type supported by the host
+     operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be
+     "ext4" if unspecified.
+
+   gateway	<string> -required-
+     The host address of the ScaleIO API Gateway.
+
+   protectionDomain	<string>
+     The name of the ScaleIO Protection Domain for the configured storage.
+
+   readOnly	<boolean>
+     Defaults to false (read/write). ReadOnly here will force the ReadOnly
+     setting in VolumeMounts.
+
+   secretRef	<Object> -required-
+     SecretRef references to the secret for ScaleIO user and other sensitive
+     information. If this is not provided, Login operation will fail.
+
+   sslEnabled	<boolean>
+     Flag to enable/disable SSL communication with Gateway, default false
+
+   storageMode	<string>
+     Indicates whether the storage for a volume should be ThickProvisioned or
+     ThinProvisioned.
+
+   storagePool	<string>
+     The ScaleIO Storage Pool associated with the protection domain.
+
+   system	<string> -required-
+     The name of the storage system as configured in ScaleIO.
+
+   volumeName	<string>
+     The name of a volume already created in the ScaleIO system that is
+     associated with this volume source.
+

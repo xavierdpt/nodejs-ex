@@ -1,0 +1,7 @@
+KIND:     PersistentVolume
+VERSION:  v1
+
+FIELD:    shareName <string>
+
+DESCRIPTION:
+     Share Name

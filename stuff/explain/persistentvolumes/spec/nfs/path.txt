@@ -1,0 +1,8 @@
+KIND:     PersistentVolume
+VERSION:  v1
+
+FIELD:    path <string>
+
+DESCRIPTION:
+     Path that is exported by the NFS server. More info:
+     https://kubernetes.io/docs/concepts/storage/volumes#nfs

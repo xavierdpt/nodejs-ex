@@ -1,0 +1,7 @@
+KIND:     PersistentVolume
+VERSION:  v1
+
+FIELD:    volumeAttributes <map[string]string>
+
+DESCRIPTION:
+     Attributes of the volume to publish.

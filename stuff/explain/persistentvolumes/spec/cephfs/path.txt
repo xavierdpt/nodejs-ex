@@ -1,0 +1,8 @@
+KIND:     PersistentVolume
+VERSION:  v1
+
+FIELD:    path <string>
+
+DESCRIPTION:
+     Optional: Used as the mounted root, rather than the full Ceph tree, default
+     is /

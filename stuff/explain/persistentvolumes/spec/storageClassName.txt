@@ -1,0 +1,8 @@
+KIND:     PersistentVolume
+VERSION:  v1
+
+FIELD:    storageClassName <string>
+
+DESCRIPTION:
+     Name of StorageClass to which this persistent volume belongs. Empty value
+     means that this volume does not belong to any StorageClass.

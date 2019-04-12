@@ -1,0 +1,7 @@
+KIND:     PersistentVolumeClaim
+VERSION:  v1
+
+FIELD:    capacity <map[string]string>
+
+DESCRIPTION:
+     Represents the actual resources of the underlying volume.

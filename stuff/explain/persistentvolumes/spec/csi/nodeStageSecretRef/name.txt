@@ -1,0 +1,7 @@
+KIND:     PersistentVolume
+VERSION:  v1
+
+FIELD:    name <string>
+
+DESCRIPTION:
+     Name is unique within a namespace to reference a secret resource.

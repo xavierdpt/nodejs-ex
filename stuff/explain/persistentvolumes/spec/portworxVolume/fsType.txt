@@ -1,0 +1,9 @@
+KIND:     PersistentVolume
+VERSION:  v1
+
+FIELD:    fsType <string>
+
+DESCRIPTION:
+     FSType represents the filesystem type to mount Must be a filesystem type
+     supported by the host operating system. Ex. "ext4", "xfs". Implicitly
+     inferred to be "ext4" if unspecified.

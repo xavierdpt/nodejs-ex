@@ -1,0 +1,7 @@
+KIND:     PersistentVolumeClaim
+VERSION:  v1
+
+FIELD:    phase <string>
+
+DESCRIPTION:
+     Phase represents the current phase of PersistentVolumeClaim.

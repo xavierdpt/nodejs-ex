@@ -1,0 +1,8 @@
+KIND:     PersistentVolume
+VERSION:  v1
+
+FIELD:    user <string>
+
+DESCRIPTION:
+     Optional: User is the rados user name, default is admin More info:
+     https://releases.k8s.io/HEAD/examples/volumes/cephfs/README.md#how-to-use-it

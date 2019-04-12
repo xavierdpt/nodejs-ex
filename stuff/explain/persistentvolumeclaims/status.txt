@@ -1,0 +1,29 @@
+KIND:     PersistentVolumeClaim
+VERSION:  v1
+
+RESOURCE: status <Object>
+
+DESCRIPTION:
+     Status represents the current information/status of a persistent volume
+     claim. Read-only. More info:
+     https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
+
+     PersistentVolumeClaimStatus is the current status of a persistent volume
+     claim.
+
+FIELDS:
+   accessModes	<[]string>
+     AccessModes contains the actual access modes the volume backing the PVC
+     has. More info:
+     https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
+
+   capacity	<map[string]string>
+     Represents the actual resources of the underlying volume.
+
+   conditions	<[]Object>
+     Current Condition of persistent volume claim. If underlying persistent
+     volume is being resized then the Condition will be set to 'ResizeStarted'.
+
+   phase	<string>
+     Phase represents the current phase of PersistentVolumeClaim.
+

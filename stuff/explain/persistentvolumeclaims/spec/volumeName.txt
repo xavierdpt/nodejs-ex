@@ -1,0 +1,8 @@
+KIND:     PersistentVolumeClaim
+VERSION:  v1
+
+FIELD:    volumeName <string>
+
+DESCRIPTION:
+     VolumeName is the binding reference to the PersistentVolume backing this
+     claim.

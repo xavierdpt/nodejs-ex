@@ -1,0 +1,8 @@
+KIND:     Route
+VERSION:  route.openshift.io/v1
+
+FIELD:    wildcardPolicy <string>
+
+DESCRIPTION:
+     Wildcard policy if any for the route. Currently only 'Subdomain' or 'None'
+     is allowed.

@@ -1,0 +1,8 @@
+KIND:     Route
+VERSION:  route.openshift.io/v1
+
+FIELD:    reason <string>
+
+DESCRIPTION:
+     (brief) reason for the condition's last transition, and is usually a
+     machine and human readable constant

@@ -1,0 +1,8 @@
+KIND:     Route
+VERSION:  route.openshift.io/v1
+
+FIELD:    path <string>
+
+DESCRIPTION:
+     Path that the router watches for, to route traffic for to the service.
+     Optional

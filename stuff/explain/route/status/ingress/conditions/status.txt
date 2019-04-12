@@ -1,0 +1,7 @@
+KIND:     Route
+VERSION:  route.openshift.io/v1
+
+FIELD:    status <string>
+
+DESCRIPTION:
+     Status is the status of the condition. Can be True, False, Unknown.

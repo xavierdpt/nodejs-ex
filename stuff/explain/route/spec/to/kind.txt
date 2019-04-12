@@ -1,0 +1,8 @@
+KIND:     Route
+VERSION:  route.openshift.io/v1
+
+FIELD:    kind <string>
+
+DESCRIPTION:
+     The kind of target that the route is referring to. Currently, only
+     'Service' is allowed

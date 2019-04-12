@@ -1,0 +1,8 @@
+KIND:     Route
+VERSION:  route.openshift.io/v1
+
+FIELD:    host <string>
+
+DESCRIPTION:
+     Host is the host string under which the route is exposed; this value is
+     required

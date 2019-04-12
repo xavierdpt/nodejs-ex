@@ -1,0 +1,7 @@
+KIND:     PersistentVolume
+VERSION:  v1
+
+FIELD:    diskURI <string>
+
+DESCRIPTION:
+     The URI the data disk in the blob storage

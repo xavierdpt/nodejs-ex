@@ -1,0 +1,7 @@
+KIND:     Route
+VERSION:  route.openshift.io/v1
+
+FIELD:    caCertificate <string>
+
+DESCRIPTION:
+     caCertificate provides the cert authority certificate contents

@@ -1,0 +1,7 @@
+KIND:     Route
+VERSION:  route.openshift.io/v1
+
+FIELD:    type <string>
+
+DESCRIPTION:
+     Type is the type of the condition. Currently only Ready.

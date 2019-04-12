@@ -1,0 +1,8 @@
+KIND:     PersistentVolume
+VERSION:  v1
+
+FIELD:    user <string>
+
+DESCRIPTION:
+     The rados user name. Default is admin. More info:
+     https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it

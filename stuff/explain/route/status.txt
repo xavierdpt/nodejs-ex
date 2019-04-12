@@ -1,0 +1,17 @@
+KIND:     Route
+VERSION:  route.openshift.io/v1
+
+RESOURCE: status <Object>
+
+DESCRIPTION:
+     status is the current state of the route
+
+     RouteStatus provides relevant info about the status of a route, including
+     which routers acknowledge it.
+
+FIELDS:
+   ingress	<[]Object> -required-
+     ingress describes the places where the route may be exposed. The list of
+     ingress points may contain duplicate Host or RouterName values. Routes are
+     considered live once they are `Ready`
+

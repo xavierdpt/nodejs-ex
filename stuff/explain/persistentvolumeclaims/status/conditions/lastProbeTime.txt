@@ -1,0 +1,7 @@
+KIND:     PersistentVolumeClaim
+VERSION:  v1
+
+FIELD:    lastProbeTime <string>
+
+DESCRIPTION:
+     Last time we probed the condition.

@@ -1,0 +1,28 @@
+KIND:     PersistentVolume
+VERSION:  v1
+
+RESOURCE: glusterfs <Object>
+
+DESCRIPTION:
+     Glusterfs represents a Glusterfs volume that is attached to a host and
+     exposed to the pod. Provisioned by an admin. More info:
+     https://releases.k8s.io/HEAD/examples/volumes/glusterfs/README.md
+
+     Represents a Glusterfs mount that lasts the lifetime of a pod. Glusterfs
+     volumes do not support ownership management or SELinux relabeling.
+
+FIELDS:
+   endpoints	<string> -required-
+     EndpointsName is the endpoint name that details Glusterfs topology. More
+     info:
+     https://releases.k8s.io/HEAD/examples/volumes/glusterfs/README.md#create-a-pod
+
+   path	<string> -required-
+     Path is the Glusterfs volume path. More info:
+     https://releases.k8s.io/HEAD/examples/volumes/glusterfs/README.md#create-a-pod
+
+   readOnly	<boolean>
+     ReadOnly here will force the Glusterfs volume to be mounted with read-only
+     permissions. Defaults to false. More info:
+     https://releases.k8s.io/HEAD/examples/volumes/glusterfs/README.md#create-a-pod
+

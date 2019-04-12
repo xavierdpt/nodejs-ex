@@ -1,0 +1,20 @@
+KIND:     PersistentVolume
+VERSION:  v1
+
+RESOURCE: photonPersistentDisk <Object>
+
+DESCRIPTION:
+     PhotonPersistentDisk represents a PhotonController persistent disk attached
+     and mounted on kubelets host machine
+
+     Represents a Photon Controller persistent disk resource.
+
+FIELDS:
+   fsType	<string>
+     Filesystem type to mount. Must be a filesystem type supported by the host
+     operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be
+     "ext4" if unspecified.
+
+   pdID	<string> -required-
+     ID that identifies Photon Controller persistent disk
+

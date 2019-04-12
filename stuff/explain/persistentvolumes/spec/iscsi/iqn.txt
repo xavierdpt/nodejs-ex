@@ -1,0 +1,7 @@
+KIND:     PersistentVolume
+VERSION:  v1
+
+FIELD:    iqn <string>
+
+DESCRIPTION:
+     Target iSCSI Qualified Name.

@@ -1,0 +1,30 @@
+KIND:     PersistentVolumeClaim
+VERSION:  v1
+
+RESOURCE: conditions <[]Object>
+
+DESCRIPTION:
+     Current Condition of persistent volume claim. If underlying persistent
+     volume is being resized then the Condition will be set to 'ResizeStarted'.
+
+     PersistentVolumeClaimCondition contails details about state of pvc
+
+FIELDS:
+   lastProbeTime	<string>
+     Last time we probed the condition.
+
+   lastTransitionTime	<string>
+     Last time the condition transitioned from one status to another.
+
+   message	<string>
+     Human-readable message indicating details about last transition.
+
+   reason	<string>
+     Unique, this should be a short, machine understandable string that gives
+     the reason for condition's last transition. If it reports "ResizeStarted"
+     that means the underlying persistent volume is being resized.
+
+   status	<string> -required-
+
+   type	<string> -required-
+

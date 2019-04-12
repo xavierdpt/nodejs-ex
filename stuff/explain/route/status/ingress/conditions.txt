@@ -1,0 +1,28 @@
+KIND:     Route
+VERSION:  route.openshift.io/v1
+
+RESOURCE: conditions <[]Object>
+
+DESCRIPTION:
+     Conditions is the state of the route, may be empty.
+
+     RouteIngressCondition contains details for the current condition of this
+     route on a particular router.
+
+FIELDS:
+   lastTransitionTime	<string>
+     RFC 3339 date and time when this condition last transitioned
+
+   message	<string>
+     Human readable message indicating details about last transition.
+
+   reason	<string>
+     (brief) reason for the condition's last transition, and is usually a
+     machine and human readable constant
+
+   status	<string> -required-
+     Status is the status of the condition. Can be True, False, Unknown.
+
+   type	<string> -required-
+     Type is the type of the condition. Currently only Ready.
+

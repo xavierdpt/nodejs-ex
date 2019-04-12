@@ -1,0 +1,8 @@
+KIND:     PersistentVolume
+VERSION:  v1
+
+FIELD:    readOnly <boolean>
+
+DESCRIPTION:
+     Optional: The value to pass to ControllerPublishVolumeRequest. Defaults to
+     false (read/write).

@@ -1,0 +1,7 @@
+KIND:     Route
+VERSION:  route.openshift.io/v1
+
+FIELD:    message <string>
+
+DESCRIPTION:
+     Human readable message indicating details about last transition.

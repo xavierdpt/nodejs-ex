@@ -1,0 +1,7 @@
+KIND:     PersistentVolume
+VERSION:  v1
+
+FIELD:    sslEnabled <boolean>
+
+DESCRIPTION:
+     Flag to enable/disable SSL communication with Gateway, default false

@@ -1,0 +1,7 @@
+KIND:     PersistentVolume
+VERSION:  v1
+
+FIELD:    key <string>
+
+DESCRIPTION:
+     The label key that the selector applies to.

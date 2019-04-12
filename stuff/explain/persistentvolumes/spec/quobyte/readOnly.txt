@@ -1,0 +1,8 @@
+KIND:     PersistentVolume
+VERSION:  v1
+
+FIELD:    readOnly <boolean>
+
+DESCRIPTION:
+     ReadOnly here will force the Quobyte volume to be mounted with read-only
+     permissions. Defaults to false.

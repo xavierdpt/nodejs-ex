@@ -1,0 +1,6 @@
+KIND:     PersistentVolumeClaim
+VERSION:  v1
+
+FIELD:    status <string>
+
+DESCRIPTION:

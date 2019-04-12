@@ -1,0 +1,7 @@
+KIND:     PersistentVolume
+VERSION:  v1
+
+FIELD:    datasetUUID <string>
+
+DESCRIPTION:
+     UUID of the dataset. This is unique identifier of a Flocker dataset

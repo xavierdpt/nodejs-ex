@@ -1,0 +1,8 @@
+KIND:     Route
+VERSION:  route.openshift.io/v1
+
+FIELD:    routerName <string>
+
+DESCRIPTION:
+     Name is a name chosen by the router to identify itself; this value is
+     required
